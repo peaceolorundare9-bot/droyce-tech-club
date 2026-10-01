@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+.next-export/
+out/
+.api-backup-tmp/
+
+# Environment & local data — create your own .env from .env.example
+.env
+.env*.local
+db/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Workspace artifacts (local only, not part of the site)
+.zscripts/
+Caddyfile
+examples/
+tests/
+tool-results/
+mini-services/
+download/
+screenshots/
+final-desktop-full.png
+final-mobile-full.png
+source_site.html
+source_content.txt
