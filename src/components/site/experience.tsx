@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { SectionHeader, Reveal } from "./section-header";
+import { SelectionCalendar } from "./selection-calendar";
 
 const STAGES = [
   {
@@ -129,6 +130,9 @@ export function Experience() {
             </div>
           </div>
         </Reveal>
+
+        {/* Selection calendar — the operational rhythm of the cycle */}
+        <SelectionCalendar />
 
         {/* Stage rows */}
         <div className="mt-16 sm:mt-24">

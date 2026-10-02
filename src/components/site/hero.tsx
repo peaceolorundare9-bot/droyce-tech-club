@@ -159,6 +159,16 @@ export function Hero() {
         transition={{ duration: 1.1, delay: 1.7, ease }}
         className="relative z-10 border-t border-cream/12 bg-ink/40 backdrop-blur-md"
       >
+        {/* cycle label */}
+        <div className="mx-auto max-w-[1440px] px-5 pt-6 sm:px-8 lg:px-12">
+          <div className="flex items-center gap-3">
+            <span className="h-px w-8 bg-bronze" aria-hidden="true" />
+            <p className="font-mono-tech text-[9.5px] font-medium uppercase tracking-[0.3em] text-cream/55">
+              Selection Cycle — 2026 Annual Residency
+            </p>
+          </div>
+        </div>
+
         <div className="mx-auto grid max-w-[1440px] grid-cols-1 divide-y divide-cream/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:px-8 lg:px-12">
           {HERO_STATS.map((stat) => (
             <div
