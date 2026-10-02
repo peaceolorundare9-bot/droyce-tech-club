@@ -80,3 +80,25 @@ Stage Summary:
 - PIPELINE LIVE: edit on GitHub main (web editor, or any push) → GitHub Actions auto-builds (~40s) → Cloudflare Pages auto-publishes → https://droyce-tech-club.pages.dev updated. No manual steps.
 - Secrets used by the pipeline are stored encrypted in GitHub repo settings (never in code).
 - Token guidance for user: old GitHub PATs (droyce-deploy, droyce-deploy-2/first PAT) can be deleted; the Cloudflare API token must be KEPT (it lives encrypted as a GitHub secret and powers future auto-deploys) — rotate it anytime by creating a new token and updating the repo secret.
+
+---
+Task ID: 5
+Agent: Super Z (main agent)
+Task: User asked to "add all what is in this website (fatibuclub source) to my own" — achieve full content parity with the source site.
+
+Work Log:
+- Re-fetched the source site; extracted all visible text (319 lines) and audited every current Droyce section component against it.
+- Browser-extracted exact source data: animated counter final values (21,000+ / 2,000+ / 150+ / 18), stat labels, and the Experience-section calendar widget structure (3 month cards Oct/Nov/Dec, Monday-first grids, legend "Selection day" pulsing dot + "Open reading day" outlined dot, gold-marked selection days Oct 7 & 22, Nov 11, Dec 4 & 18).
+- Gap analysis result: everything from the source was already present and adapted EXCEPT (1) the Selection Calendar widget, (2) the "Selection Cycle — Annual Residency" hero stats label.
+- Computed correct 2026 Monday-first calendar grids via Python (Oct: offset 3/31d, Nov: offset 6/30d, Dec: offset 1/31d) — site is internally consistent with © 2026.
+- Built src/components/site/selection-calendar.tsx in the Droyce design language (ink-2 cards, hairline gap-px grid, Playfair month names, mono day numerals, bronze-filled selection days with pulsing ring, legend with "Selection Day" + "Open Learning Day" — brand-adapted from "open reading day", staggered Reveal animations, reduced-motion safe). Wired into Experience section between image band and stage rows.
+- Added "Selection Cycle — 2026 Annual Residency" label (bronze tick + mono caps) above hero stats strip.
+- Added .pulse-dot keyframes to globals.css (+ reduced-motion override); fixed eslint config to ignore static build dirs (.next-export, .api-backup-tmp) — lint now fully clean (was erroring on minified build output).
+- QA: dev + static builds verified (calendar renders, 35-cell October grid, bronze days 7/22/11/4/18, no horizontal scroll desktop 1280px & mobile 390px, VLM visual review of hero strip and calendar passed, zero page errors).
+- Committed (41b1b5a) and pushed → auto-deploy run 36946358423 completed success in ~30s.
+- Live verification on https://droyce-tech-club.pages.dev: calendar visible with all 5 bronze selection days, hero label present, no errors, no overflow.
+
+Stage Summary:
+- Full content parity with the source site achieved: every section, stat, philosophy, committee, principles, voices, form field, footer element now present in Droyce-branded form — plus the previously-missing Selection Calendar and hero cycle label.
+- Content audit trail: source_visible_text.txt kept locally (gitignored) for reference.
+- Live site updated automatically via the GitHub Actions pipeline (no manual deploy needed).
