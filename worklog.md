@@ -61,3 +61,22 @@ Stage Summary:
 - SOURCE CODE: https://github.com/peaceolorundare9-bot/droyce-tech-club (public, main branch)
 - Deployment fully verified end-to-end on production. Future updates: edit site → bun run build:static → wrangler pages deploy out (or connect repo to Pages for auto-deploys).
 - Advised user to revoke/delete both tokens after deployment (GitHub: Developer settings → Tokens; Cloudflare: dash.cloudflare.com/profile/api-tokens).
+
+---
+Task ID: 4
+Agent: Super Z (main agent)
+Task: Set up automatic deployment — any edit pushed to GitHub main should rebuild and update the live site automatically.
+
+Work Log:
+- Verified both tokens still active (GitHub PAT #1, Cloudflare token #2).
+- Installed pynacl (--break-system-packages) and stored Cloudflare credentials as encrypted GitHub Actions repo secrets via the secrets API (public-key + libsodium sealed box + PUT): CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID. Token-bearing helper script deleted after use.
+- Created .github/workflows/deploy.yml: on push to main (and manual dispatch) → checkout → setup-bun → bun install --frozen-lockfile → bun run build:static → wrangler pages deploy out (secrets referenced, never committed). Concurrency group cancels superseded runs.
+- First push attempt rejected: PAT #1 lacked `workflow` scope (GitHub refuses workflow file changes without it). User generated PAT #2 with repo+workflow scope via pre-filled link.
+- Pushed workflow with PAT #2 (commit aaca4d9). The push itself triggered the first Actions run (id 36945144213): completed success in ~40s.
+- Verified end-to-end: new Cloudflare production deployment 79d8c866 "Auto-deploy from GitHub" (2026-10-02T00:16:54Z) live; site serving HTTP 200 with correct title.
+- Updated README.md with auto-deploy documentation.
+
+Stage Summary:
+- PIPELINE LIVE: edit on GitHub main (web editor, or any push) → GitHub Actions auto-builds (~40s) → Cloudflare Pages auto-publishes → https://droyce-tech-club.pages.dev updated. No manual steps.
+- Secrets used by the pipeline are stored encrypted in GitHub repo settings (never in code).
+- Token guidance for user: old GitHub PATs (droyce-deploy, droyce-deploy-2/first PAT) can be deleted; the Cloudflare API token must be KEPT (it lives encrypted as a GitHub secret and powers future auto-deploys) — rotate it anytime by creating a new token and updating the repo secret.
