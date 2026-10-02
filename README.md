@@ -44,7 +44,19 @@ The result in `out/` is a complete, self-contained static site.
 
 ## Deploying to Cloudflare Pages
 
-Using `wrangler` (direct upload):
+### Automatic deploys (recommended)
+
+This repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`).
+**Every edit pushed to `main` is automatically rebuilt and published to
+https://droyce-tech-club.pages.dev within ~2 minutes.**
+
+Setup (already done once):
+1. Repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are stored
+   under *Settings → Secrets and variables → Actions*.
+2. Any commit to `main` (including edits made with the GitHub web editor)
+   triggers a build + deploy automatically.
+
+### Manual deploys using wrangler (direct upload)
 
 ```bash
 bunx wrangler pages project create droyce-tech-club --production-branch=main
