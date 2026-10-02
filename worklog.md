@@ -41,3 +41,23 @@ Stage Summary:
 - Deployment package READY: `out/` (static site for Cloudflare Pages direct upload) + clean git main (52 files, single commit) ready to push to GitHub.
 - Awaiting from user: (1) GitHub PAT with repo scope, (2) Cloudflare API token with Cloudflare Pages:Edit, (3) Cloudflare Account ID.
 - Deployment plan once credentials arrive: create GitHub repo `droyce-tech-club` (default public) → push main → wrangler pages project create + deploy out/ → deliver https://droyce-tech-club.pages.dev link (fallback name if taken).
+
+---
+Task ID: 3
+Agent: Super Z (main agent)
+Task: Deploy the Droyce Tech Club site to GitHub and Cloudflare Pages using user-supplied credentials.
+
+Work Log:
+- Verified GitHub PAT (user peaceolorundare9-bot) and Cloudflare token #1 — CF token #1 was active but had NO permissions (accounts and Pages APIs both rejected it; user had left Permissions/Account Resources empty).
+- Created GitHub repo peaceolorundare9-bot/droyce-tech-club (public) and pushed clean main (52 files, single commit) via https remote.
+- User created Cloudflare token #2 with correct Cloudflare Pages:Edit permission — verified against accounts/{id}/pages/projects (success:true).
+- Created Cloudflare Pages project "droyce-tech-club" (production_branch: main) via API → subdomain droyce-tech-club.pages.dev.
+- Deployed static site: bunx wrangler pages deploy out --project-name=droyce-tech-club → 46 files uploaded, deployment d9673173, production env.
+- Live verification (curl + agent-browser on https://droyce-tech-club.pages.dev): HTTP 200, correct title, 6/6 images load after scroll (lazy-load OK), all sections present, no horizontal scroll, zero page errors, contact form E2E verified on live site (fields fill, submit → success state + mailto:drpeace.droycetechclub@gmail.com prefilled), 0x FatiBuClub.
+- Security cleanup: scrubbed embedded PAT from git remote URL (now plain https), closed browser session.
+
+Stage Summary:
+- LIVE WEBSITE: https://droyce-tech-club.pages.dev (production deployment d9673173, 46 files, 3.1s upload)
+- SOURCE CODE: https://github.com/peaceolorundare9-bot/droyce-tech-club (public, main branch)
+- Deployment fully verified end-to-end on production. Future updates: edit site → bun run build:static → wrangler pages deploy out (or connect repo to Pages for auto-deploys).
+- Advised user to revoke/delete both tokens after deployment (GitHub: Developer settings → Tokens; Cloudflare: dash.cloudflare.com/profile/api-tokens).
