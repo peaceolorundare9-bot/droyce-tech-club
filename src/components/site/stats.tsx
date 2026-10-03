@@ -38,7 +38,7 @@ export function Stats() {
         <Reveal>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <h2 className="font-display text-[clamp(1.9rem,4vw,3.2rem)] font-medium leading-tight text-cream">
-              The community, <em className="italic text-bronze-light">measured</em>.
+              The community, <em className="italic">measured</em>.
             </h2>
             <p className="max-w-sm font-mono-tech text-[10.5px] uppercase leading-relaxed tracking-[0.22em] text-fog">
               Numbers that reflect depth — not vanity metrics.
@@ -47,7 +47,7 @@ export function Stats() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="mt-14 grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cols-1 gap-px border border-line-soft bg-line sm:grid-cols-2 lg:grid-cols-4">
             {STATS.map((stat, i) => (
               <article
                 key={stat.label}
@@ -59,17 +59,17 @@ export function Stats() {
                 >
                   /{String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="font-display text-[clamp(3rem,5.5vw,4.6rem)] font-semibold leading-none tabular-nums tracking-tight text-cream transition-colors duration-500 group-hover:text-bronze-light">
+                <p className="font-display text-[clamp(3rem,5.5vw,4.6rem)] font-semibold leading-none tabular-nums tracking-tight text-cream transition-colors duration-500 group-hover:text-gold-light">
                   <Counter target={stat.target} suffix={stat.suffix} duration={2200} />
                 </p>
-                <h3 className="mt-6 font-mono-tech text-[11px] font-medium uppercase tracking-[0.2em] text-bronze">
+                <h3 className="mt-6 font-mono-tech text-[11px] font-medium uppercase tracking-[0.2em] text-gold">
                   {stat.label}
                 </h3>
                 <p className="mt-3 text-[13.5px] font-light leading-relaxed text-cream/55">
                   {stat.sub}
                 </p>
                 <span
-                  className="absolute bottom-0 left-0 h-px w-0 bg-bronze transition-all duration-700 ease-out group-hover:w-full"
+                  className="absolute bottom-0 left-0 h-px w-0 bg-gold transition-all duration-700 ease-out group-hover:w-full"
                   aria-hidden="true"
                 />
               </article>

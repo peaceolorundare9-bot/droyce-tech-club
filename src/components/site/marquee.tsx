@@ -25,12 +25,12 @@ export function Marquee() {
               className={
                 i % 2 === 0
                   ? "font-display text-2xl italic text-cream/80 sm:text-3xl"
-                  : "font-mono-tech text-xs uppercase tracking-[0.34em] text-bronze/80"
+                  : "font-mono-tech text-xs uppercase tracking-[0.34em] text-gold/80"
               }
             >
               {word}
             </span>
-            <span className="h-1.5 w-1.5 rotate-45 bg-bronze/50" />
+            <span className="h-1.5 w-1.5 rotate-45 bg-gold/50" />
           </span>
         ))}
       </div>

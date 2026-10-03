@@ -13,7 +13,7 @@ const NAV_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-line bg-[#070708]">
+    <footer className="relative border-t border-line bg-[#08090b]">
       <div className="mx-auto max-w-[1440px] px-5 pb-10 pt-20 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
           {/* Brand */}
@@ -21,7 +21,7 @@ export function Footer() {
             <Reveal>
               <a href="#home" className="group inline-flex items-center gap-4" aria-label="Droyce Tech Club — back to top">
                 <span
-                  className="flex h-12 w-12 items-center justify-center border border-bronze/60 bg-bronze/10 font-display text-xl text-cream transition-colors duration-500 group-hover:bg-bronze group-hover:text-ink"
+                  className="flex h-12 w-12 items-center justify-center border border-gold/60 bg-gold/10 font-display text-xl text-cream transition-colors duration-500 group-hover:bg-gold group-hover:text-ink"
                   aria-hidden="true"
                 >
                   D
@@ -30,7 +30,7 @@ export function Footer() {
                   <span className="font-display text-xl font-semibold tracking-[0.08em] text-cream">
                     DROYCE
                   </span>
-                  <span className="mt-1 font-mono-tech text-[10px] font-medium uppercase tracking-[0.42em] text-bronze">
+                  <span className="mt-1 font-mono-tech text-[10px] font-medium uppercase tracking-[0.42em] text-gold">
                     Tech Club
                   </span>
                 </span>
@@ -42,9 +42,9 @@ export function Footer() {
               </p>
               <a
                 href="mailto:drpeace.droycetechclub@gmail.com"
-                className="group mt-7 inline-flex items-center gap-3 border-b border-bronze/40 pb-1 text-[14px] text-cream/80 transition-colors duration-300 hover:border-bronze hover:text-bronze-light"
+                className="group mt-7 inline-flex items-center gap-3 border-b border-gold/40 pb-1 text-[14px] text-cream/80 transition-colors duration-300 hover:border-gold hover:text-gold-light"
               >
-                <Mail className="h-4 w-4 text-bronze" aria-hidden="true" />
+                <Mail className="h-4 w-4 text-gold" aria-hidden="true" />
                 drpeace.droycetechclub@gmail.com
               </a>
             </Reveal>
@@ -62,7 +62,7 @@ export function Footer() {
                     <li key={link.href}>
                       <a
                         href={link.href}
-                        className="group inline-flex items-center gap-1.5 text-[14.5px] font-light text-cream/65 transition-colors duration-300 hover:text-bronze-light"
+                        className="group inline-flex items-center gap-1.5 text-[14.5px] font-light text-cream/65 transition-colors duration-300 hover:text-gold-light"
                       >
                         {link.label}
                         <ArrowUpRight
@@ -87,8 +87,8 @@ export function Footer() {
                 &ldquo;Depth, at scale, still wins.&rdquo;
               </p>
               <div className="mt-8 flex items-center gap-3" aria-hidden="true">
-                <span className="h-1.5 w-1.5 rotate-45 bg-bronze" />
-                <span className="h-px w-16 bg-bronze/40" />
+                <span className="h-1.5 w-1.5 rotate-45 bg-gold" />
+                <span className="h-px w-16 bg-gold/40" />
               </div>
             </Reveal>
           </div>

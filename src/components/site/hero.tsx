@@ -61,10 +61,10 @@ export function Hero() {
         className="absolute right-6 top-1/2 z-10 hidden -translate-y-1/2 items-center gap-4 lg:flex"
         aria-hidden="true"
       >
-        <span className="writing-vertical font-mono-tech text-[10px] uppercase tracking-[0.5em] text-cream/40">
+        <span className="writing-vertical font-mono-tech text-[10px] uppercase tracking-[0.5em] text-cream/60">
           Private · Technology · Society
         </span>
-        <span className="h-16 w-px bg-cream/20" />
+        <span className="h-16 w-px bg-cream/30" />
       </motion.div>
 
       {/* Main content */}
@@ -78,8 +78,8 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.5, ease }}
           className="flex items-center gap-4"
         >
-          <span className="h-px w-14 bg-bronze" aria-hidden="true" />
-          <p className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.32em] text-bronze sm:text-[11px]">
+          <span className="h-px w-14 bg-gold" aria-hidden="true" />
+          <p className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.32em] text-gold sm:text-[11px]">
             A Private Technology Society &amp; Managed Digital Experience
           </p>
         </motion.div>
@@ -102,7 +102,7 @@ export function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 1.1, delay: 0.84, ease }}
             >
-              <em className="italic text-bronze-light">Curiosity</em> Meets
+              <em className="italic">Curiosity</em> Meets
             </motion.span>
           </span>
           <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
@@ -112,7 +112,7 @@ export function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 1.1, delay: 0.98, ease }}
             >
-              Collective <em className="italic text-bronze-light">Craft</em>.
+              Collective <em className="italic">Craft</em>.
             </motion.span>
           </span>
         </h1>
@@ -137,14 +137,14 @@ export function Hero() {
         >
           <a
             href="#about"
-            className="group inline-flex min-h-12 items-center justify-center gap-3 bg-cream px-8 py-3.5 font-mono-tech text-[11px] font-medium uppercase tracking-[0.22em] text-ink transition-all duration-500 hover:bg-bronze"
+            className="group inline-flex min-h-12 items-center justify-center gap-3 bg-[linear-gradient(135deg,#c5a059_0%,#a37f3a_100%)] px-8 py-3.5 font-mono-tech text-[11px] font-semibold uppercase tracking-[0.22em] text-ink shadow-glow transition-all duration-500 hover:bg-[linear-gradient(135deg,#e6ca65_0%,#c5a059_100%)] hover:shadow-glow-lg"
           >
             Explore Droyce Tech Club
             <ArrowDown className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-y-0.5" aria-hidden="true" />
           </a>
           <a
             href="#contact"
-            className="group inline-flex min-h-12 items-center justify-center gap-3 border border-cream/60 bg-ink/30 px-8 py-3.5 font-mono-tech text-[11px] font-medium uppercase tracking-[0.22em] text-cream backdrop-blur-sm transition-all duration-500 hover:border-bronze hover:bg-bronze/15 hover:text-bronze-light"
+            className="group inline-flex min-h-12 items-center justify-center gap-3 border border-gold/40 bg-transparent px-8 py-3.5 font-mono-tech text-[11px] font-medium uppercase tracking-[0.22em] text-cream backdrop-blur-sm transition-all duration-500 hover:border-gold/70 hover:bg-gold/10 hover:text-gold"
           >
             Join the Community
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
@@ -157,19 +157,19 @@ export function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.1, delay: 1.7, ease }}
-        className="relative z-10 border-t border-cream/12 bg-ink/40 backdrop-blur-md"
+        className="relative z-10 border-t border-line-soft bg-ink/40 backdrop-blur-md"
       >
         {/* cycle label */}
         <div className="mx-auto max-w-[1440px] px-5 pt-6 sm:px-8 lg:px-12">
           <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-bronze" aria-hidden="true" />
+            <span className="h-px w-8 bg-gold" aria-hidden="true" />
             <p className="font-mono-tech text-[9.5px] font-medium uppercase tracking-[0.3em] text-cream/55">
               Selection Cycle — 2026 Annual Residency
             </p>
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-[1440px] grid-cols-1 divide-y divide-cream/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:px-8 lg:px-12">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-1 divide-y divide-line-soft sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:px-8 lg:px-12">
           {HERO_STATS.map((stat) => (
             <div
               key={stat.label}
@@ -193,7 +193,7 @@ export function Hero() {
           <motion.span
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-            className="h-8 w-px bg-gradient-to-b from-bronze to-transparent"
+            className="h-8 w-px bg-gradient-to-b from-gold to-transparent"
           />
         </div>
       </motion.div>

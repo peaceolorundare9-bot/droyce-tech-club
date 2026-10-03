@@ -24,7 +24,7 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
     >
       <span
         className={cn(
-          "flex items-center justify-center border border-bronze/60 bg-bronze/10 font-display text-cream transition-colors duration-500 group-hover:bg-bronze group-hover:text-ink",
+          "flex items-center justify-center border border-gold/60 bg-gold/10 font-display text-cream transition-colors duration-500 group-hover:bg-gold group-hover:text-ink",
           compact ? "h-9 w-9 text-base" : "h-10 w-10 text-lg"
         )}
         aria-hidden="true"
@@ -35,7 +35,7 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
         <span className="font-display text-[17px] font-semibold tracking-[0.08em] text-cream">
           DROYCE
         </span>
-        <span className="mt-1 font-mono-tech text-[9px] font-medium uppercase tracking-[0.42em] text-bronze">
+        <span className="mt-1 font-mono-tech text-[9px] font-medium uppercase tracking-[0.42em] text-gold">
           Tech Club
         </span>
       </span>
@@ -70,7 +70,7 @@ export function Nav() {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-700",
           scrolled
-            ? "border-b border-line bg-ink/90 backdrop-blur-xl"
+            ? "border-b border-line-soft bg-[rgba(11,12,14,0.85)] backdrop-blur-md"
             : "border-b border-transparent bg-transparent"
         )}
       >
@@ -90,7 +90,7 @@ export function Nav() {
                 >
                   {link.label}
                   <span
-                    className="absolute -bottom-1.5 left-0 h-px w-0 bg-bronze transition-all duration-500 group-hover:w-full"
+                    className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full"
                     aria-hidden="true"
                   />
                 </a>
@@ -101,7 +101,7 @@ export function Nav() {
           <div className="flex items-center gap-3">
             <a
               href="#contact"
-              className="group hidden items-center gap-2 border border-bronze/70 px-6 py-2.5 font-mono-tech text-[10.5px] font-medium uppercase tracking-[0.2em] text-bronze transition-all duration-500 hover:bg-bronze hover:text-ink sm:inline-flex"
+              className="group hidden items-center gap-2 bg-[linear-gradient(135deg,#c5a059_0%,#a37f3a_100%)] px-6 py-2.5 font-mono-tech text-[10.5px] font-semibold uppercase tracking-[0.2em] text-ink shadow-glow transition-all duration-500 hover:bg-[linear-gradient(135deg,#e6ca65_0%,#c5a059_100%)] hover:shadow-glow-lg sm:inline-flex"
             >
               Join Droyce Tech Club
               <ArrowUpRight
@@ -116,7 +116,7 @@ export function Nav() {
               onClick={() => setOpen(true)}
               aria-label="Open menu"
               aria-expanded={open}
-              className="flex h-11 w-11 items-center justify-center border border-cream/20 text-cream transition-colors duration-300 hover:border-bronze hover:text-bronze xl:hidden"
+              className="flex h-11 w-11 items-center justify-center border border-cream/20 text-cream transition-colors duration-300 hover:border-gold hover:text-gold xl:hidden"
             >
               <Menu className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -143,7 +143,7 @@ export function Nav() {
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Close menu"
-                className="flex h-11 w-11 items-center justify-center border border-cream/20 text-cream transition-colors duration-300 hover:border-bronze hover:text-bronze"
+                className="flex h-11 w-11 items-center justify-center border border-cream/20 text-cream transition-colors duration-300 hover:border-gold hover:text-gold"
               >
                 <X className="h-5 w-5" aria-hidden="true" />
               </button>
@@ -164,10 +164,10 @@ export function Nav() {
                       onClick={() => setOpen(false)}
                       className="group flex items-baseline gap-4 border-b border-line py-4"
                     >
-                      <span className="font-mono-tech text-[10px] tracking-[0.3em] text-bronze">
+                      <span className="font-mono-tech text-[10px] tracking-[0.3em] text-gold">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-display text-3xl font-medium text-cream transition-colors duration-300 group-hover:text-bronze sm:text-4xl">
+                      <span className="font-display text-3xl font-medium text-cream transition-colors duration-300 group-hover:text-gold sm:text-4xl">
                         {link.label}
                       </span>
                     </a>
@@ -182,7 +182,7 @@ export function Nav() {
                 transition={{ delay: 0.55, duration: 0.5 }}
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-10 inline-flex items-center justify-center gap-3 bg-bronze px-8 py-4 font-mono-tech text-[11px] font-medium uppercase tracking-[0.22em] text-ink transition-colors duration-500 hover:bg-cream"
+                className="btn-luxe-solid mt-10"
               >
                 Join Droyce Tech Club
                 <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -195,7 +195,7 @@ export function Nav() {
               </p>
               <a
                 href="mailto:drpeace.droycetechclub@gmail.com"
-                className="mt-3 block text-sm text-cream/80 transition-colors hover:text-bronze"
+                className="mt-3 block text-sm text-cream/80 transition-colors hover:text-gold"
               >
                 drpeace.droycetechclub@gmail.com
               </a>

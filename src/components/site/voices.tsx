@@ -22,7 +22,7 @@ export function Voices() {
   return (
     <section
       id="voices"
-      className="relative bg-ink-2 py-24 sm:py-32 lg:py-40"
+      className="relative bg-ink py-24 sm:py-32 lg:py-40"
       aria-label="Voices from the community"
     >
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
@@ -32,7 +32,7 @@ export function Voices() {
             eyebrow="From the Hub"
             title={
               <>
-                Voices from <em className="italic text-bronze-light">the hub</em>.
+                Voices from <em className="italic">the hub</em>.
               </>
             }
           />
@@ -44,13 +44,13 @@ export function Voices() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-px border border-line bg-line lg:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-px border border-line-soft bg-line lg:grid-cols-2">
           {TESTIMONIALS.map((t, i) => (
             <Reveal key={t.perspective} delay={i * 0.12}>
               <figure className="group relative flex h-full flex-col justify-between bg-ink-2 p-9 transition-colors duration-700 hover:bg-ink-3 sm:p-12 lg:p-14">
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-2 font-mono-tech text-[10px] uppercase tracking-[0.26em] text-bronze">
+                    <span className="inline-flex items-center gap-2 font-mono-tech text-[10px] uppercase tracking-[0.26em] text-gold">
                       <Quote className="h-3.5 w-3.5" aria-hidden="true" />
                       {t.perspective}
                     </span>
@@ -69,7 +69,7 @@ export function Voices() {
                 </div>
                 <figcaption className="mt-10 flex items-center gap-4 border-t border-line pt-6">
                   <span
-                    className="flex h-11 w-11 items-center justify-center border border-bronze/50 font-mono-tech text-[11px] tracking-[0.12em] text-bronze"
+                    className="flex h-11 w-11 items-center justify-center border border-gold/50 font-mono-tech text-[11px] tracking-[0.12em] text-gold"
                     aria-hidden="true"
                   >
                     {t.initials}
@@ -79,7 +79,7 @@ export function Voices() {
                   </span>
                 </figcaption>
                 <span
-                  className="absolute bottom-0 left-0 h-px w-0 bg-bronze transition-all duration-700 ease-out group-hover:w-full"
+                  className="absolute bottom-0 left-0 h-px w-0 bg-gold transition-all duration-700 ease-out group-hover:w-full"
                   aria-hidden="true"
                 />
               </figure>

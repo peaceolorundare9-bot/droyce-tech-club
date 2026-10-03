@@ -63,7 +63,7 @@ export function Experience() {
                 <>
                   A twelve-month,
                   <br />
-                  <em className="italic text-bronze-light">managed</em> experience.
+                  <em className="italic">managed</em> experience.
                 </>
               }
             />
@@ -126,7 +126,7 @@ export function Experience() {
               <p className="font-mono-tech text-[10px] uppercase tracking-[0.3em] text-cream/85">
                 The Residency — an active immersion, not a spectator seat
               </p>
-              <span className="hidden h-px w-16 bg-bronze sm:block" aria-hidden="true" />
+              <span className="hidden h-px w-16 bg-gold sm:block" aria-hidden="true" />
             </div>
           </div>
         </Reveal>
@@ -141,7 +141,7 @@ export function Experience() {
               <article className="group relative grid grid-cols-1 gap-6 border-t border-line py-10 transition-colors duration-700 hover:bg-ink-2/60 sm:grid-cols-12 sm:gap-8 sm:py-12 lg:px-6">
                 {/* huge outlined number */}
                 <div className="sm:col-span-3">
-                  <span className="text-outline font-display text-[clamp(4.5rem,9vw,8rem)] font-semibold leading-[0.9] transition-all duration-700 group-hover:text-bronze group-hover:[-webkit-text-stroke:0px]">
+                  <span className="text-outline font-display text-[clamp(4.5rem,9vw,8rem)] font-semibold leading-[0.9] transition-all duration-700 group-hover:text-gold group-hover:[-webkit-text-stroke:0px]">
                     {stage.number}
                   </span>
                 </div>
@@ -156,7 +156,7 @@ export function Experience() {
                 </div>
                 {/* meta */}
                 <div className="flex items-end sm:col-span-2 sm:justify-end">
-                  <p className="font-mono-tech text-[9.5px] uppercase leading-relaxed tracking-[0.24em] text-bronze/80 sm:text-right">
+                  <p className="font-mono-tech text-[9.5px] uppercase leading-relaxed tracking-[0.24em] text-gold/80 sm:text-right">
                     {stage.meta}
                   </p>
                 </div>

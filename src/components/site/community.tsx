@@ -24,9 +24,14 @@ export function Community() {
   return (
     <section
       id="community"
-      className="relative overflow-hidden bg-cream py-24 text-ink sm:py-32 lg:py-40"
+      className="relative overflow-hidden bg-ink py-24 sm:py-32 lg:py-40"
       aria-label="Community and engagement"
     >
+      {/* ambient champagne glow */}
+      <div
+        className="ambient-glow pointer-events-none absolute -left-48 bottom-0 h-[560px] w-[560px]"
+        aria-hidden="true"
+      />
       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-10">
           {/* Big statement */}
@@ -34,7 +39,6 @@ export function Community() {
             <SectionHeader
               index="04"
               eyebrow="High-Signal Engagement"
-              tone="light"
               title={
                 <>
                   <RevealLine>When the right minds</RevealLine>
@@ -42,14 +46,14 @@ export function Community() {
                     meet the right ideas,
                   </RevealLine>
                   <RevealLine>
-                    impact is <em className="italic text-bronze-dark">inevitable</em>.
+                    impact is <em className="italic">inevitable</em>.
                   </RevealLine>
                 </>
               }
             />
 
             <Reveal delay={0.15} className="mt-10 max-w-xl">
-              <p className="text-[15.5px] font-light leading-[1.85] text-ink/75 sm:text-[17px]">
+              <p className="text-[15.5px] font-light leading-[1.85] text-cream/70 sm:text-[17px]">
                 Our community thrives on rigorous, authentic feedback. Through
                 our private channels and active digital salons, we generate
                 consistent, analytical commentary that reflects the true depth
@@ -62,15 +66,15 @@ export function Community() {
 
             {/* Benchmark */}
             <Reveal delay={0.25} className="mt-12">
-              <div className="flex items-end gap-6 border-t border-ink/12 pt-8">
-                <p className="font-display text-[clamp(4.5rem,9vw,7.5rem)] font-semibold leading-none tabular-nums text-bronze-dark">
-                  150<span className="text-ink">+</span>
+              <div className="flex items-end gap-6 border-t border-line pt-8">
+                <p className="font-display text-[clamp(4.5rem,9vw,7.5rem)] font-semibold leading-none tabular-nums text-gold">
+                  150<span className="text-cream">+</span>
                 </p>
                 <div className="pb-3">
-                  <p className="font-mono-tech text-[10px] uppercase tracking-[0.26em] text-ink/60">
+                  <p className="font-mono-tech text-[10px] uppercase tracking-[0.26em] text-fog">
                     Engagement clusters
                   </p>
-                  <p className="mt-1.5 max-w-[15rem] text-[13.5px] font-light leading-relaxed text-ink/65">
+                  <p className="mt-1.5 max-w-[15rem] text-[13.5px] font-light leading-relaxed text-cream/55">
                     The benchmark our structured engagement sustains across
                     major platforms.
                   </p>
@@ -99,12 +103,12 @@ export function Community() {
                     <span className="font-mono-tech text-[9.5px] uppercase tracking-[0.28em] text-cream/85">
                       One global network, many minds
                     </span>
-                    <span className="h-px w-10 bg-bronze" aria-hidden="true" />
+                    <span className="h-px w-10 bg-gold" aria-hidden="true" />
                   </figcaption>
                 </div>
                 {/* corner detail */}
                 <span
-                  className="absolute -right-3 -top-3 h-14 w-14 border-r border-t border-bronze-dark/60"
+                  className="absolute -right-3 -top-3 h-14 w-14 border-r border-t border-gold/50"
                   aria-hidden="true"
                 />
               </figure>
@@ -113,24 +117,24 @@ export function Community() {
         </div>
 
         {/* Pillars */}
-        <div className="mt-20 grid grid-cols-1 gap-px border border-ink/12 bg-ink/12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-20 grid grid-cols-1 gap-px border border-line-soft bg-line sm:grid-cols-2 lg:grid-cols-4">
           {PILLARS.map((pillar, i) => (
             <Reveal key={pillar.title} delay={i * 0.08}>
-              <article className="group h-full bg-cream p-7 transition-colors duration-500 hover:bg-paper sm:p-8">
+              <article className="group h-full bg-ink-2 p-7 transition-colors duration-500 hover:bg-ink-3 sm:p-8">
                 <span
-                  className="font-mono-tech text-[10px] tracking-[0.24em] text-bronze-dark"
+                  className="font-mono-tech text-[10px] tracking-[0.24em] text-gold"
                   aria-hidden="true"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-4 font-display text-xl font-medium text-ink sm:text-[1.35rem]">
+                <h3 className="mt-4 font-display text-xl font-medium text-cream sm:text-[1.35rem]">
                   {pillar.title}
                 </h3>
-                <p className="mt-3 text-[13.5px] font-light leading-relaxed text-ink/65">
+                <p className="mt-3 text-[13.5px] font-light leading-relaxed text-cream/55">
                   {pillar.description}
                 </p>
                 <span
-                  className="mt-6 block h-px w-8 bg-bronze-dark/60 transition-all duration-500 group-hover:w-full"
+                  className="mt-6 block h-px w-8 bg-gold/60 transition-all duration-500 group-hover:w-full"
                   aria-hidden="true"
                 />
               </article>

@@ -44,7 +44,7 @@ export function SelectionCalendar() {
       <Reveal>
         <div className="flex flex-col gap-6 border-t border-line pt-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.3em] text-bronze">
+            <p className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.3em] text-gold">
               The Selection Calendar — Q4 2026
             </p>
             <p className="mt-3 max-w-lg text-[14px] font-light leading-relaxed text-cream/60">
@@ -56,8 +56,8 @@ export function SelectionCalendar() {
           <ul className="flex flex-wrap items-center gap-x-8 gap-y-3" aria-label="Calendar legend">
             <li className="flex items-center gap-2.5">
               <span className="relative flex h-3 w-3 items-center justify-center" aria-hidden="true">
-                <span className="absolute h-3 w-3 rounded-full bg-bronze" />
-                <span className="pulse-dot absolute h-3 w-3 rounded-full bg-bronze" />
+                <span className="absolute h-3 w-3 rounded-full bg-gold" />
+                <span className="pulse-dot absolute h-3 w-3 rounded-full bg-gold" />
               </span>
               <span className="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-cream/65">
                 Selection Day
@@ -77,7 +77,7 @@ export function SelectionCalendar() {
       </Reveal>
 
       {/* month cards */}
-      <div className="mt-10 grid grid-cols-1 gap-px border border-line bg-line lg:grid-cols-3">
+      <div className="mt-10 grid grid-cols-1 gap-px border border-line-soft bg-line lg:grid-cols-3">
         {MONTHS.map((spec, m) => {
           const cells = buildCells(spec);
           const picks = spec.selectionDays.length;
@@ -92,7 +92,7 @@ export function SelectionCalendar() {
                       {spec.year}
                     </span>
                   </h4>
-                  <p className="shrink-0 font-mono-tech text-[10px] uppercase tracking-[0.18em] text-bronze-light">
+                  <p className="shrink-0 font-mono-tech text-[10px] uppercase tracking-[0.18em] text-gold-light">
                     {picks} {picks === 1 ? "selection" : "selections"}
                   </p>
                 </div>
@@ -121,7 +121,7 @@ export function SelectionCalendar() {
                         <span
                           className={
                             isSelection
-                              ? "relative flex aspect-square items-center justify-center bg-bronze font-mono-tech text-[11px] font-semibold tabular-nums text-ink"
+                              ? "relative flex aspect-square items-center justify-center bg-gold font-mono-tech text-[11px] font-semibold tabular-nums text-ink"
                               : "flex aspect-square items-center justify-center border border-line/70 font-mono-tech text-[11px] font-normal tabular-nums text-cream/45 transition-colors duration-500 group-hover:border-line"
                           }
                           {...(isSelection ? { "aria-label": `${spec.name} ${day} — selection day` } : {})}
@@ -129,7 +129,7 @@ export function SelectionCalendar() {
                           {day}
                           {isSelection && (
                             <span
-                              className="pulse-dot absolute inset-0 bg-bronze/50"
+                              className="pulse-dot absolute inset-0 bg-gold/50"
                               aria-hidden="true"
                             />
                           )}

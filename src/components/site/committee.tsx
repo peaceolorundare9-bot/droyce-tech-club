@@ -28,7 +28,7 @@ export function Committee() {
           <Reveal y={48}>
             <figure className="relative mx-auto max-w-md lg:max-w-none">
               <div
-                className="absolute -right-4 -top-4 h-full w-full border border-bronze/40 sm:-right-6 sm:-top-6"
+                className="absolute -right-4 -top-4 h-full w-full border border-gold/40 sm:-right-6 sm:-top-6"
                 aria-hidden="true"
               />
               <div className="relative aspect-[3/4] overflow-hidden bg-ink-2">
@@ -47,7 +47,7 @@ export function Committee() {
                   <p className="font-display text-2xl font-medium text-cream">
                     Prof. Waheed Heritage
                   </p>
-                  <p className="mt-1.5 font-mono-tech text-[10px] uppercase tracking-[0.26em] text-bronze-light">
+                  <p className="mt-1.5 font-mono-tech text-[10px] uppercase tracking-[0.26em] text-gold-light">
                     Selection Committee Chair
                   </p>
                 </figcaption>
@@ -65,7 +65,7 @@ export function Committee() {
               <>
                 The Selection
                 <br />
-                <em className="italic text-bronze-light">Committee</em>.
+                <em className="italic">Committee</em>.
               </>
             }
           />
@@ -90,7 +90,7 @@ export function Committee() {
               {ROLES.map((role) => (
                 <li
                   key={role}
-                  className="border border-cream/15 px-5 py-2.5 font-mono-tech text-[10.5px] font-medium uppercase tracking-[0.18em] text-cream/75 transition-colors duration-300 hover:border-bronze hover:text-bronze-light"
+                  className="border border-line-soft bg-ink-2 px-5 py-2.5 font-mono-tech text-[10.5px] font-medium uppercase tracking-[0.18em] text-cream/75 transition-colors duration-300 hover:border-gold/60 hover:text-gold-light"
                 >
                   {role}
                 </li>
@@ -102,7 +102,7 @@ export function Committee() {
             <div className="grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2">
               <div className="bg-ink-2 p-7">
                 <p className="font-display text-4xl font-semibold tabular-nums text-cream">
-                  100<span className="text-bronze">s</span>
+                  100<span className="text-gold">s</span>
                 </p>
                 <p className="mt-3 font-mono-tech text-[10px] uppercase leading-relaxed tracking-[0.2em] text-fog">
                   Independent projects reviewed every year
@@ -110,14 +110,14 @@ export function Committee() {
               </div>
               <div className="bg-ink-2 p-7">
                 <p className="font-display text-4xl font-semibold text-cream">
-                  <span className="text-bronze">1</span>–2
+                  <span className="text-gold">1</span>–2
                 </p>
                 <p className="mt-3 font-mono-tech text-[10px] uppercase leading-relaxed tracking-[0.2em] text-fog">
                   Advanced monthly into the residency
                 </p>
               </div>
             </div>
-            <p className="mt-6 border-l-2 border-bronze pl-5 text-[14px] font-light italic leading-relaxed text-cream/60">
+            <p className="mt-6 border-l-2 border-gold pl-5 text-[14px] font-light italic leading-relaxed text-cream/60">
               Narrative structure &amp; community building — the twin
               disciplines behind every selection decision.
             </p>

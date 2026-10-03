@@ -44,9 +44,14 @@ export function Operate() {
   return (
     <section
       id="operate"
-      className="relative overflow-hidden bg-paper py-24 text-ink sm:py-32 lg:py-40"
+      className="relative overflow-hidden bg-ink py-24 sm:py-32 lg:py-40"
       aria-label="How we operate"
     >
+      {/* ambient champagne glow */}
+      <div
+        className="ambient-glow pointer-events-none absolute -left-40 top-0 h-[520px] w-[520px]"
+        aria-hidden="true"
+      />
       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
         {/* Header */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
@@ -54,17 +59,16 @@ export function Operate() {
             <SectionHeader
               index="06"
               eyebrow="Operating Principle"
-              tone="light"
               title={
                 <>
-                  How we <em className="italic text-bronze-dark">operate</em>.
+                  How we <em className="italic">operate</em>.
                 </>
               }
             />
           </div>
           <div className="flex items-end lg:col-span-5 lg:col-start-8">
             <Reveal delay={0.15}>
-              <p className="text-[15px] font-light leading-[1.85] text-ink/70 sm:text-base">
+              <p className="text-[15px] font-light leading-[1.85] text-cream/70 sm:text-base">
                 Structure is what makes depth durable. Six operating
                 principles govern everything from how we are funded to how a
                 single review gets written — so that quality never depends on
@@ -78,26 +82,26 @@ export function Operate() {
         <div className="mt-16 sm:mt-20">
           {PRINCIPLES.map((principle, i) => (
             <Reveal key={principle.number} delay={Math.min(i * 0.05, 0.2)}>
-              <article className="group grid grid-cols-1 items-start gap-4 border-t border-ink/12 py-8 transition-colors duration-500 hover:bg-cream-2/40 sm:grid-cols-12 sm:gap-8 sm:py-10 lg:px-6">
+              <article className="group grid grid-cols-1 items-start gap-4 border-t border-line py-8 transition-colors duration-500 hover:bg-ink-2/60 sm:grid-cols-12 sm:gap-8 sm:py-10 lg:px-6">
                 <div className="sm:col-span-2">
-                  <span className="text-outline-dark font-display text-6xl font-semibold leading-none transition-all duration-500 group-hover:text-bronze-dark group-hover:[-webkit-text-stroke:0px] sm:text-7xl">
+                  <span className="text-outline font-display text-6xl font-semibold leading-none transition-all duration-500 group-hover:text-gold group-hover:[-webkit-text-stroke:0px] sm:text-7xl">
                     {principle.number}
                   </span>
                 </div>
                 <div className="sm:col-span-4">
-                  <h3 className="font-display text-[clamp(1.4rem,2.4vw,2rem)] font-medium leading-snug text-ink">
+                  <h3 className="font-display text-[clamp(1.4rem,2.4vw,2rem)] font-medium leading-snug text-cream">
                     {principle.title}
                   </h3>
                 </div>
                 <div className="sm:col-span-6">
-                  <p className="max-w-2xl text-[14.5px] font-light leading-[1.8] text-ink/70 sm:text-[15.5px]">
+                  <p className="max-w-2xl text-[14.5px] font-light leading-[1.8] text-cream/60 sm:text-[15.5px]">
                     {principle.description}
                   </p>
                 </div>
               </article>
             </Reveal>
           ))}
-          <div className="border-t border-ink/12" aria-hidden="true" />
+          <div className="border-t border-line" aria-hidden="true" />
         </div>
 
         {/* What we are not / How we are funded */}
@@ -124,19 +128,19 @@ export function Operate() {
           </Reveal>
           <div className="grid grid-cols-1 gap-6 lg:col-span-7">
             <Reveal delay={0.1}>
-              <article className="h-full border border-ink/12 bg-cream-2/60 p-8 sm:p-10">
-                <p className="font-mono-tech text-[10px] uppercase tracking-[0.26em] text-bronze-dark">
+              <article className="card-surface h-full p-8 sm:p-10">
+                <p className="font-mono-tech text-[10px] uppercase tracking-[0.26em] text-gold">
                   What we are not
                 </p>
-                <p className="mt-4 font-display text-[clamp(1.35rem,2.2vw,1.9rem)] font-medium leading-snug text-ink">
+                <p className="mt-4 font-display text-[clamp(1.35rem,2.2vw,1.9rem)] font-medium leading-snug text-cream">
                   Not a commercial &ldquo;pay-to-play&rdquo; marketing model.
                   Selection is driven by merit alone.
                 </p>
               </article>
             </Reveal>
             <Reveal delay={0.18}>
-              <article className="h-full border border-ink/12 bg-ink p-8 text-cream sm:p-10">
-                <p className="font-mono-tech text-[10px] uppercase tracking-[0.26em] text-bronze-light">
+              <article className="card-surface h-full p-8 text-cream sm:p-10">
+                <p className="font-mono-tech text-[10px] uppercase tracking-[0.26em] text-gold-light">
                   How we are funded
                 </p>
                 <p className="mt-4 font-display text-[clamp(1.35rem,2.2vw,1.9rem)] font-medium leading-snug text-cream">

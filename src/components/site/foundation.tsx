@@ -15,16 +15,21 @@ export function Foundation() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-paper py-24 text-ink sm:py-32 lg:py-40"
+      className="relative overflow-hidden bg-ink py-24 sm:py-32 lg:py-40"
       aria-label="About Droyce Tech Club"
     >
+      {/* ambient champagne glow */}
+      <div
+        className="ambient-glow pointer-events-none absolute -right-40 top-1/4 h-[560px] w-[560px]"
+        aria-hidden="true"
+      />
       {/* faint grid texture */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.35]"
         aria-hidden="true"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(11,11,13,0.045) 1px, transparent 1px)",
+            "linear-gradient(to right, rgba(197,160,89,0.03) 1px, transparent 1px)",
           backgroundSize: "clamp(80px, 12vw, 160px) 100%",
         }}
       />
@@ -35,12 +40,11 @@ export function Foundation() {
           <SectionHeader
             index="01"
             eyebrow="Our Foundation"
-            tone="light"
             title={
               <>
                 <RevealLine>Technology as a</RevealLine>
                 <RevealLine>
-                  <em className="italic text-bronze-dark">permanent</em> contribution —
+                  <em className="italic">permanent</em> contribution —
                 </RevealLine>
                 <RevealLine>not a passing commodity.</RevealLine>
               </>
@@ -48,20 +52,20 @@ export function Foundation() {
           />
 
           <Reveal delay={0.15} className="mt-10 max-w-2xl space-y-6">
-            <p className="text-[15.5px] font-light leading-[1.85] text-ink/75 sm:text-[17px]">
+            <p className="text-[15.5px] font-light leading-[1.85] text-cream/70 sm:text-[17px]">
               Droyce Tech Club is built on an{" "}
-              <strong className="font-semibold text-ink">interdisciplinary focus</strong>{" "}
+              <strong className="font-semibold text-cream">interdisciplinary focus</strong>{" "}
               that bridges the gap between technology, human progress, and
               community. We dedicate ourselves to scouting exceptional,
               independently published works that deserve a{" "}
-              <strong className="font-semibold text-ink">legacy spotlight</strong> —
+              <strong className="font-semibold text-cream">legacy spotlight</strong> —
               projects with the depth to outlast the news cycle and the craft
               to shape how people think.
             </p>
-            <p className="text-[15.5px] font-light leading-[1.85] text-ink/75 sm:text-[17px]">
+            <p className="text-[15.5px] font-light leading-[1.85] text-cream/70 sm:text-[17px]">
               By introducing selected creators to a sophisticated network of
               deeply engaged thinkers, we foster{" "}
-              <strong className="font-semibold text-ink">high-signal discourse</strong>{" "}
+              <strong className="font-semibold text-cream">high-signal discourse</strong>{" "}
               that treats technology not as a temporary commodity, but as a
               permanent cultural contribution — examined, argued over, and
               remembered.
@@ -73,7 +77,7 @@ export function Foundation() {
               {IDEAS.map((idea) => (
                 <li
                   key={idea}
-                  className="border border-ink/15 bg-cream-2/50 px-4 py-2 font-mono-tech text-[10.5px] font-medium uppercase tracking-[0.16em] text-ink/70 transition-colors duration-300 hover:border-bronze-dark hover:text-bronze-dark"
+                  className="border border-line-soft bg-ink-2 px-4 py-2 font-mono-tech text-[10.5px] font-medium uppercase tracking-[0.16em] text-fog transition-colors duration-300 hover:border-gold/50 hover:text-gold"
                 >
                   {idea}
                 </li>
@@ -82,11 +86,11 @@ export function Foundation() {
           </Reveal>
 
           <Reveal delay={0.32} className="mt-12">
-            <div className="flex items-center gap-5 border-t border-ink/12 pt-8">
-              <span className="font-display text-5xl font-medium text-bronze-dark">
+            <div className="flex items-center gap-5 border-t border-line pt-8">
+              <span className="font-display text-5xl font-medium text-gold">
                 12
               </span>
-              <p className="max-w-[20rem] font-mono-tech text-[10.5px] uppercase leading-relaxed tracking-[0.18em] text-ink/60">
+              <p className="max-w-[20rem] font-mono-tech text-[10.5px] uppercase leading-relaxed tracking-[0.18em] text-fog">
                 Months of structured, managed engagement — one full cycle to
                 build a lasting legacy.
               </p>
@@ -98,15 +102,15 @@ export function Foundation() {
         <div className="lg:col-span-5">
           <Reveal delay={0.2} y={48}>
             <div className="relative">
-              {/* offset bronze frame */}
+              {/* offset gold frame */}
               <div
-                className="absolute -left-4 -top-4 h-full w-full border border-bronze-dark/50 sm:-left-6 sm:-top-6"
+                className="absolute -left-4 -top-4 h-full w-full border border-gold/40 sm:-left-6 sm:-top-6"
                 aria-hidden="true"
               />
               <figure className="relative aspect-[3/4] overflow-hidden bg-ink">
                 <Image
                   src="/images/foundation.jpg"
-                  alt="A focused young professional writing code on a laptop in a dark studio, lit by warm bronze screen glow"
+                  alt="A focused young professional writing code on a laptop in a dark studio, lit by warm gold screen glow"
                   fill
                   sizes="(min-width: 1024px) 40vw, 100vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out hover:scale-[1.04]"
@@ -119,16 +123,16 @@ export function Foundation() {
                   <span className="font-mono-tech text-[9.5px] uppercase tracking-[0.28em] text-cream/85">
                     The Craft of Deep Work
                   </span>
-                  <span className="h-px w-10 bg-bronze" aria-hidden="true" />
+                  <span className="h-px w-10 bg-gold" aria-hidden="true" />
                 </figcaption>
               </figure>
 
               {/* floating stat card */}
-              <div className="absolute -bottom-8 -left-3 border border-ink/10 bg-cream px-7 py-6 shadow-[0_24px_60px_-18px_rgba(11,11,13,0.35)] sm:-left-10">
-                <p className="font-display text-4xl font-semibold tabular-nums text-ink sm:text-5xl">
-                  21,000<span className="text-bronze-dark">+</span>
+              <div className="absolute -bottom-8 -left-3 border border-line-soft bg-ink-2 px-7 py-6 shadow-luxe sm:-left-10">
+                <p className="font-display text-4xl font-semibold tabular-nums text-cream sm:text-5xl">
+                  21,000<span className="text-gold">+</span>
                 </p>
-                <p className="mt-2 font-mono-tech text-[9.5px] uppercase tracking-[0.24em] text-ink/60">
+                <p className="mt-2 font-mono-tech text-[9.5px] uppercase tracking-[0.24em] text-fog">
                   Global Hub Members
                 </p>
               </div>

@@ -4,63 +4,60 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* ── Droyce Tech Club — Luxury Editorial Design System ───────────── */
-  --color-ink: #0b0b0d;            /* deep black — primary dark bg */
-  --color-ink-2: #121215;          /* charcoal surface */
-  --color-ink-3: #1a1a1f;          /* elevated surface */
-  --color-cream: #f2ede1;          /* warm off-white */
-  --color-cream-2: #e8e1d0;        /* deeper cream */
-  --color-paper: #faf7f0;          /* soft white */
-  --color-fog: #a3a3ab;            /* subtle gray text */
-  --color-fog-dark: #6b6b73;       /* muted text on light */
-  --color-bronze: #c6a15b;         /* refined champagne bronze accent */
-  --color-bronze-light: #e0c58e;   /* light bronze */
-  --color-bronze-dark: #9a7b3f;    /* deep bronze */
-  --color-line: rgba(242, 237, 225, 0.10);        /* hairline on dark */
-  --color-line-dark: rgba(11, 11, 13, 0.12);      /* hairline on light */
+  /* ── Droyce Tech Club — Elite Editorial Dark Design System ──────────
+     Inspired by Stripe Press / Monocle / private member clubs.
+     Canvas: deep obsidian matte black. Surface: dark charcoal.
+     Accent: brushed champagne gold. Text: warm off-white + slate.   */
+  --color-ink: #0b0c0e;            /* deep obsidian — primary canvas */
+  --color-ink-2: #13161a;          /* dark charcoal surface (cards) */
+  --color-ink-3: #1a1e24;          /* elevated surface / card hover */
+  --color-cream: #f2f4f7;          /* warm off-white — primary text */
+  --color-fog: #9aa1b0;            /* slate gray — muted / captions */
+  --color-gold: #c5a059;           /* brushed champagne gold accent */
+  --color-gold-light: #e6ca65;     /* lighter gold glow — hover/highlight */
+  --color-gold-dark: #a37f3a;      /* deep gold — gradient stop */
+  --color-line: rgba(197, 160, 89, 0.2);        /* gold hairline — dividers */
+  --color-line-soft: rgba(197, 160, 89, 0.15);  /* subtle gold — card borders */
 
   --font-display: var(--font-display-src), Georgia, serif;
   --font-body: var(--font-body-src), system-ui, sans-serif;
   --font-mono-tech: var(--font-mono-src), monospace;
-
-  --shadow-luxe: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
-  --shadow-card: 0 20px 60px -15px rgba(0, 0, 0, 0.45);
 }
 
 :root {
   --radius: 0rem;
-  /* shadcn compatibility tokens (dark-luxe base) */
-  --background: #0b0b0d;
-  --foreground: #f2ede1;
-  --card: #121215;
-  --card-foreground: #f2ede1;
-  --popover: #121215;
-  --popover-foreground: #f2ede1;
-  --primary: #c6a15b;
-  --primary-foreground: #0b0b0d;
-  --secondary: #1a1a1f;
-  --secondary-foreground: #f2ede1;
-  --muted: #1a1a1f;
-  --muted-foreground: #a3a3ab;
-  --accent: #1a1a1f;
-  --accent-foreground: #f2ede1;
+  /* shadcn compatibility tokens (obsidian + champagne gold) */
+  --background: #0b0c0e;
+  --foreground: #f2f4f7;
+  --card: #13161a;
+  --card-foreground: #f2f4f7;
+  --popover: #13161a;
+  --popover-foreground: #f2f4f7;
+  --primary: #c5a059;
+  --primary-foreground: #0b0c0e;
+  --secondary: #1a1e24;
+  --secondary-foreground: #f2f4f7;
+  --muted: #1a1e24;
+  --muted-foreground: #9aa1b0;
+  --accent: #1a1e24;
+  --accent-foreground: #f2f4f7;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: rgba(242, 237, 225, 0.10);
-  --input: rgba(242, 237, 225, 0.14);
-  --ring: #c6a15b;
-  --chart-1: #c6a15b;
-  --chart-2: #a3a3ab;
-  --chart-3: #9a7b3f;
-  --chart-4: #e0c58e;
-  --chart-5: #6b6b73;
-  --sidebar: #121215;
-  --sidebar-foreground: #f2ede1;
-  --sidebar-primary: #c6a15b;
-  --sidebar-primary-foreground: #0b0b0d;
-  --sidebar-accent: #1a1a1f;
-  --sidebar-accent-foreground: #f2ede1;
-  --sidebar-border: rgba(242, 237, 225, 0.10);
-  --sidebar-ring: #c6a15b;
+  --border: rgba(197, 160, 89, 0.15);
+  --input: rgba(197, 160, 89, 0.2);
+  --ring: #c5a059;
+  --chart-1: #c5a059;
+  --chart-2: #9aa1b0;
+  --chart-3: #a37f3a;
+  --chart-4: #e6ca65;
+  --chart-5: #1a1e24;
+  --sidebar: #13161a;
+  --sidebar-foreground: #f2f4f7;
+  --sidebar-primary: #c5a059;
+  --sidebar-primary-foreground: #0b0c0e;
+  --sidebar-accent: #1a1e24;
+  --sidebar-accent-foreground: #f2f4f7;
+  --sidebar-border: rgba(197, 160, 89, 0.15);
+  --sidebar-ring: #c5a059;
 }
 
 @theme inline {
@@ -102,9 +99,15 @@
     overflow-x: hidden;
   }
 
+  /* Editorial accent — every italicized keyword glows champagne gold */
+  em {
+    color: #c5a059;
+    font-style: italic;
+  }
+
   ::selection {
-    background: #c6a15b;
-    color: #0b0b0d;
+    background: #c5a059;
+    color: #0b0c0e;
   }
 
   /* elegant scrollbar */
@@ -112,59 +115,93 @@
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #0b0b0d;
+    background: #0b0c0e;
   }
   ::-webkit-scrollbar-thumb {
-    background: #2a2a30;
+    background: #262b33;
     border-radius: 0;
-    border: 2px solid #0b0b0d;
+    border: 2px solid #0b0c0e;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #c6a15b;
+    background: #c5a059;
   }
 }
 
 /* ── Utilities ────────────────────────────────────────────────────── */
 @layer utilities {
+  /* champagne gold glow shadows */
+  .shadow-glow {
+    box-shadow: 0 4px 20px rgba(197, 160, 89, 0.25);
+  }
+  .shadow-glow-lg {
+    box-shadow: 0 4px 32px rgba(197, 160, 89, 0.4);
+  }
+  .shadow-luxe {
+    box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.7);
+  }
+
   /* mono eyebrow label */
   .eyebrow {
-    @apply font-mono-tech text-[11px] font-medium uppercase tracking-[0.28em] text-bronze;
+    @apply font-mono-tech text-[11px] font-medium uppercase tracking-[0.28em] text-gold;
   }
 
   /* giant outlined numerals */
   .text-outline {
     color: transparent;
-    -webkit-text-stroke: 1px rgba(242, 237, 225, 0.22);
+    -webkit-text-stroke: 1px rgba(242, 244, 247, 0.22);
   }
-  .text-outline-bronze {
+  .text-outline-gold {
     color: transparent;
-    -webkit-text-stroke: 1px rgba(198, 161, 91, 0.45);
-  }
-  .text-outline-dark {
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(11, 11, 13, 0.22);
+    -webkit-text-stroke: 1px rgba(197, 160, 89, 0.45);
   }
 
-  /* hairline separators */
+  /* hairline separators — champagne gold */
   .hairline {
     @apply h-px w-full bg-line;
-  }
-  .hairline-dark {
-    @apply h-px w-full bg-line-dark;
   }
 
   /* display serif helpers */
   .font-display {
     font-family: var(--font-display-src), Georgia, serif;
   }
-  /* premium button — outlined */
-  .btn-luxe-outline {
-    @apply relative inline-flex min-h-11 items-center justify-center gap-3 border border-cream/30 px-8 py-3 font-mono-tech text-[11px] font-medium uppercase tracking-[0.22em] text-cream transition-all duration-500 hover:border-bronze hover:bg-bronze hover:text-ink;
+
+  /* ── Primary CTA — brushed champagne gold gradient ─────────────── */
+  .btn-luxe-solid {
+    @apply relative inline-flex min-h-11 items-center justify-center gap-3 px-8 py-3 font-mono-tech text-[11px] font-semibold uppercase tracking-[0.22em] text-ink transition-all duration-500;
+    background-image: linear-gradient(135deg, #c5a059 0%, #a37f3a 100%);
+    box-shadow: 0 4px 20px rgba(197, 160, 89, 0.25);
+  }
+  .btn-luxe-solid:hover {
+    background-image: linear-gradient(135deg, #e6ca65 0%, #c5a059 100%);
+    box-shadow: 0 4px 32px rgba(197, 160, 89, 0.4);
   }
 
-  /* premium button — solid bronze */
-  .btn-luxe-solid {
-    @apply relative inline-flex min-h-11 items-center justify-center gap-3 bg-bronze px-8 py-3 font-mono-tech text-[11px] font-medium uppercase tracking-[0.22em] text-ink transition-all duration-500 hover:bg-cream;
+  /* ── Secondary / outline CTA — gold hairline frame ─────────────── */
+  .btn-luxe-outline {
+    @apply relative inline-flex min-h-11 items-center justify-center gap-3 border px-8 py-3 font-mono-tech text-[11px] font-medium uppercase tracking-[0.22em] text-cream transition-all duration-500;
+    border-color: rgba(197, 160, 89, 0.4);
+    background: transparent;
+  }
+  .btn-luxe-outline:hover {
+    background: rgba(197, 160, 89, 0.1);
+    border-color: rgba(197, 160, 89, 0.7);
+    color: #c5a059;
+  }
+
+  /* ── Surface card — charcoal + subtle gold border ───────────────── */
+  .card-surface {
+    @apply border bg-ink-2 text-cream;
+    border-color: rgba(197, 160, 89, 0.15);
+  }
+
+  /* ambient champagne glow — radial accent for section depth */
+  .ambient-glow {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(197, 160, 89, 0.15) 0%,
+      rgba(197, 160, 89, 0.05) 40%,
+      transparent 70%
+    );
   }
 
   /* subtle grain overlay for cinematic depth */

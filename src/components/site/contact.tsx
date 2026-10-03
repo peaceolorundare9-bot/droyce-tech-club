@@ -112,7 +112,7 @@ export function Contact() {
               <>
                 Connect with
                 <br />
-                <em className="italic text-bronze-light">Droyce Tech Club</em>.
+                <em className="italic">Droyce Tech Club</em>.
               </>
             }
           />
@@ -137,9 +137,9 @@ export function Contact() {
               </p>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="group mt-3 inline-flex items-center gap-3 text-[15px] text-cream transition-colors duration-300 hover:text-bronze-light sm:text-base"
+                className="group mt-3 inline-flex items-center gap-3 text-[15px] text-cream transition-colors duration-300 hover:text-gold-light sm:text-base"
               >
-                <Mail className="h-4 w-4 text-bronze" aria-hidden="true" />
+                <Mail className="h-4 w-4 text-gold" aria-hidden="true" />
                 {CONTACT_EMAIL}
                 <ArrowUpRight
                   className="h-3.5 w-3.5 opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:opacity-100"
@@ -156,7 +156,7 @@ export function Contact() {
         {/* Right — the form */}
         <div className="lg:col-span-7">
           <Reveal delay={0.2} y={44}>
-            <div className="border border-line bg-ink-2/80 p-8 backdrop-blur-sm sm:p-12">
+            <div className="border border-line-soft bg-ink-2/80 p-8 backdrop-blur-sm sm:p-12">
               {status === "success" ? (
                 <motion.div
                   initial={{ opacity: 0, y: 16 }}
@@ -165,7 +165,7 @@ export function Contact() {
                   className="flex min-h-[420px] flex-col items-center justify-center text-center"
                   role="status"
                 >
-                  <span className="flex h-14 w-14 items-center justify-center border border-bronze bg-bronze/10 text-bronze">
+                  <span className="flex h-14 w-14 items-center justify-center border border-gold bg-gold/10 text-gold">
                     <Check className="h-6 w-6" aria-hidden="true" />
                   </span>
                   <h3 className="mt-6 font-display text-3xl font-medium text-cream">
@@ -200,7 +200,7 @@ export function Contact() {
                     <div>
                       <label
                         htmlFor="name"
-                        className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.24em] text-bronze"
+                        className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.24em] text-gold"
                       >
                         Full Name
                       </label>
@@ -211,13 +211,13 @@ export function Contact() {
                         required
                         autoComplete="name"
                         placeholder="Your full name"
-                        className="mt-3 w-full border-b border-cream/20 bg-transparent pb-3 text-[15px] font-light text-cream placeholder:text-cream/25 focus:border-bronze focus:outline-none"
+                        className="mt-3 w-full border-b border-line-soft bg-transparent pb-3 text-[15px] font-light text-cream placeholder:text-cream/50 focus:border-gold focus:outline-none"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="email"
-                        className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.24em] text-bronze"
+                        className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.24em] text-gold"
                       >
                         Email
                       </label>
@@ -228,13 +228,13 @@ export function Contact() {
                         required
                         autoComplete="email"
                         placeholder="Where should the committee reach you?"
-                        className="mt-3 w-full border-b border-cream/20 bg-transparent pb-3 text-[15px] font-light text-cream placeholder:text-cream/40 focus:border-bronze focus:outline-none"
+                        className="mt-3 w-full border-b border-line-soft bg-transparent pb-3 text-[15px] font-light text-cream placeholder:text-cream/50 focus:border-gold focus:outline-none"
                       />
                     </div>
                     <div className="sm:col-span-2">
                       <label
                         htmlFor="details"
-                        className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.24em] text-bronze"
+                        className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.24em] text-gold"
                       >
                         Book / Project / Publication Details
                       </label>
@@ -244,13 +244,13 @@ export function Contact() {
                         type="text"
                         required
                         placeholder="Title, format, and where it is published or hosted"
-                        className="mt-3 w-full border-b border-cream/20 bg-transparent pb-3 text-[15px] font-light text-cream placeholder:text-cream/40 focus:border-bronze focus:outline-none"
+                        className="mt-3 w-full border-b border-line-soft bg-transparent pb-3 text-[15px] font-light text-cream placeholder:text-cream/50 focus:border-gold focus:outline-none"
                       />
                     </div>
                     <div className="sm:col-span-2">
                       <label
                         htmlFor="message"
-                        className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.24em] text-bronze"
+                        className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.24em] text-gold"
                       >
                         Message
                       </label>
@@ -260,7 +260,7 @@ export function Contact() {
                         required
                         rows={4}
                         placeholder="Tell the committee why your work belongs in the residency"
-                        className="mt-3 w-full resize-none border-b border-cream/20 bg-transparent pb-3 text-[15px] font-light text-cream placeholder:text-cream/40 focus:border-bronze focus:outline-none"
+                        className="mt-3 w-full resize-none border-b border-line-soft bg-transparent pb-3 text-[15px] font-light text-cream placeholder:text-cream/50 focus:border-gold focus:outline-none"
                       />
                     </div>
                   </div>
@@ -278,7 +278,7 @@ export function Contact() {
                     <button
                       type="submit"
                       disabled={status === "submitting"}
-                      className="group inline-flex min-h-12 items-center justify-center gap-3 bg-bronze px-9 py-3.5 font-mono-tech text-[11px] font-medium uppercase tracking-[0.22em] text-ink transition-all duration-500 hover:bg-cream disabled:cursor-not-allowed disabled:opacity-60"
+                      className="group inline-flex min-h-12 items-center justify-center gap-3 bg-[linear-gradient(135deg,#c5a059_0%,#a37f3a_100%)] px-9 py-3.5 font-mono-tech text-[11px] font-semibold uppercase tracking-[0.22em] text-ink shadow-glow transition-all duration-500 hover:bg-[linear-gradient(135deg,#e6ca65_0%,#c5a059_100%)] hover:shadow-glow-lg disabled:cursor-not-allowed disabled:opacity-60"
                     >
                       {status === "submitting" ? (
                         <>
