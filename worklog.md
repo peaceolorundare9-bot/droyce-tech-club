@@ -102,3 +102,23 @@ Stage Summary:
 - Full content parity with the source site achieved: every section, stat, philosophy, committee, principles, voices, form field, footer element now present in Droyce-branded form — plus the previously-missing Selection Calendar and hero cycle label.
 - Content audit trail: source_visible_text.txt kept locally (gitignored) for reference.
 - Live site updated automatically via the GitHub Actions pipeline (no manual deploy needed).
+
+---
+Task ID: 6
+Agent: Super Z (main agent)
+Task: Refactor the entire site to an elite $3,000 dark-mode editorial aesthetic (Stripe Press / Monocle / private member club inspiration) with user-specified exact color tokens — obsidian canvas, champagne gold accents, gold italic typography, glass nav, gradient CTAs, charcoal cards with gold hairline borders.
+
+Work Log:
+- Rewrote globals.css design system: tokens ink #0B0C0E / ink-2 #13161A / ink-3 #1A1E24 / cream #F2F4F7 / fog #9AA1B0 / gold #C5A059 / gold-light #E6CA65 / gold-dark #A37F3A / line rgba(gold,0.2) / line-soft rgba(gold,0.15); shadcn :root tokens remapped; global `em { color: #C5A059 }` rule; .btn-luxe-solid = 135deg gold gradient + ink text + 0 4px 20px gold glow shadow; .btn-luxe-outline = transparent + gold 0.4 border + gold hover fill; .card-surface + .ambient-glow utilities; gold ::selection + scrollbar.
+- Converted the 3 light sections (Foundation, Community, Operate) fully to dark: canvas backgrounds, cream text, surface cards, gold frames/pills/dividers, gold ambient glows; removed SectionHeader light tone (single dark style).
+- Nav: scrolled state = rgba(11,12,14,0.85) + backdrop-blur(12px) + 1px gold 0.15 border; Join CTA + mobile CTA + hero primary + contact submit = gold gradient CTAs; hero secondary = spec outline button.
+- Cards everywhere (stats grid, calendar months, voices, pillars, committee stats, form, floating 21k card) on #13161A with 1px gold 0.15 borders, hover #1A1E24; dividers/gap-grids gold 0.2; calendar selection days gold with ink text; form underlines gold hairline with gold focus.
+- Renamed all bronze→gold classes across 15 files; removed paper/cream-2/fog-dark/line-dark legacy tokens; themeColor → #0B0C0E.
+- Fixed Tailwind 4 collision: `--color-glow` token made `shadow-glow` resolve as a shadow-COLOR utility (no box-shadow) — removed the token, defined .shadow-glow/-lg/.luxe as plain CSS utilities; verified in-browser.
+- QA: lint clean; agent-browser desktop+mobile(390px): zero page errors, no horizontal scroll, all spec values verified by computed styles (canvas rgb(11,12,14), cards rgb(19,22,26), borders rgba(197,160,89,0.15), dividers 0.2, em rgb(197,160,89), nav glass exact, CTA gradient+glow+ink text exact, muted rgb(154,161,176)); mobile menu + form E2E (success state) pass; 2 VLM design reviews: "high-fidelity, production-ready" and "APPROVED" — fixed placeholder contrast (cream/50) and vertical side label visibility (cream/60) per VLM feedback.
+- Committed a177049, pushed → Actions run 37088478520 success (~30s) → live site verified: new CSS served (gradient/shadow/btn classes), computed styles match spec on production, zero errors.
+
+Stage Summary:
+- LIVE https://droyce-tech-club.pages.dev now runs the full elite dark-mode editorial design system per the user's exact token spec; structure, animations, and content untouched.
+- All design rules applied globally: palette, gold em typography, glass nav, gradient/outline CTAs, charcoal cards + gold borders, gold dividers, ambient glows.
+- Screenshots in screenshots/redesign/ (16 files) for reference.
