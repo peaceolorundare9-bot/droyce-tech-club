@@ -4,36 +4,35 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { SectionHeader, Reveal } from "./section-header";
-import { SelectionCalendar } from "./selection-calendar";
 
 const STAGES = [
   {
     number: "01",
-    title: "Selection & Onboarding",
+    title: "Structured Learning Journey",
     description:
-      "A chosen participant enters the residency and is formally introduced to the engaged member base — a deliberate welcome engineered for immediate, high-level visibility.",
-    meta: "Entry into the cohort",
+      "When your project is selected, it enters a twelve-month ecosystem of guided deep engagement with an elite member base. Every month brings new discussion prompts, hosted learning groups, and structured pathways that turn a single project into a year-long conversation.",
+    meta: "Guided deep engagement",
   },
   {
     number: "02",
-    title: "Structured Deep Dives",
+    title: "High-Signal Discussions",
     description:
-      "Guided, analytical exploration through private salons and chapter-level discussion — unlocking the full depth of the work, layer by layer.",
-    meta: "Analytical immersion",
+      "Our private channels and active discussions generate consistent analytical commentary that reflects the true depth of your work. Members meet weekly in small groups to examine design, structure, and the questions your project raises.",
+    meta: "Analytical commentary",
   },
   {
     number: "03",
-    title: "Review & Engagement",
+    title: "Sustainable Review Velocity",
     description:
-      "Sustained, high-quality commentary translates into measurable engagement-cluster momentum across major platforms — proof of genuine resonance.",
-    meta: "Momentum & velocity",
+      "We cultivate long-tail momentum for your work by guiding an elite member base through structured engagement — ensuring sustainable review velocity and permanent intellectual recognition, rather than a one-week spike.",
+    meta: "Long-tail momentum",
   },
   {
     number: "04",
-    title: "Long-Term Recognition",
+    title: "Selection Committee Access",
     description:
-      "Long-tail engagement cements lasting intellectual recognition for the work — a permanent mark, not a fleeting campaign.",
-    meta: "A permanent legacy",
+      "Selected creators work directly with our committee of technology specialists and cultural curators. You get honest editorial feedback, network introductions, and a partner invested in the long life of your work.",
+    meta: "Direct committee access",
   },
 ];
 
@@ -58,12 +57,12 @@ export function Experience() {
           <div className="lg:col-span-7">
             <SectionHeader
               index="03"
-              eyebrow="The Droyce Tech Club Experience"
+              eyebrow="The Experience"
               title={
                 <>
-                  A twelve-month,
+                  A <em className="italic">year-long</em> immersion
                   <br />
-                  <em className="italic">managed</em> experience.
+                  for the work that earns it.
                 </>
               }
             />
@@ -71,34 +70,12 @@ export function Experience() {
           <div className="flex flex-col justify-end lg:col-span-5">
             <Reveal delay={0.15}>
               <p className="text-[15px] font-light leading-[1.85] text-cream/70 sm:text-base">
-                Each month the Selection Committee advances one to two projects
-                into the residency — eighteen standout participants across the
-                annual cycle. This is not a passive membership; it is an
-                active, year-long immersion program. We cultivate long-tail
-                momentum by guiding an elite community through structured
-                deep-dives, ensuring sustainable engagement velocity and
-                permanent recognition.
+                The residency is not a passive community selection. It is an
+                active, twelve-month immersion program that treats each
+                selected project as a permanent cultural contribution worth a
+                sustained conversation between you and a serious global
+                membership.
               </p>
-              <div className="mt-8 flex flex-wrap gap-x-10 gap-y-4">
-                <div>
-                  <p className="font-display text-2xl font-medium text-cream">1–2</p>
-                  <p className="mt-1 font-mono-tech text-[9.5px] uppercase tracking-[0.22em] text-fog">
-                    Selections monthly
-                  </p>
-                </div>
-                <div>
-                  <p className="font-display text-2xl font-medium text-cream">18</p>
-                  <p className="mt-1 font-mono-tech text-[9.5px] uppercase tracking-[0.22em] text-fog">
-                    Participants per cycle
-                  </p>
-                </div>
-                <div>
-                  <p className="font-display text-2xl font-medium text-cream">12</p>
-                  <p className="mt-1 font-mono-tech text-[9.5px] uppercase tracking-[0.22em] text-fog">
-                    Months of structure
-                  </p>
-                </div>
-              </div>
             </Reveal>
           </div>
         </div>
@@ -130,9 +107,6 @@ export function Experience() {
             </div>
           </div>
         </Reveal>
-
-        {/* Selection calendar — the operational rhythm of the cycle */}
-        <SelectionCalendar />
 
         {/* Stage rows */}
         <div className="mt-16 sm:mt-24">

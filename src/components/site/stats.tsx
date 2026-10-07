@@ -11,19 +11,19 @@ const STATS = [
   {
     target: 2000,
     suffix: "+",
-    label: "Active Digital Salon Members",
+    label: "Active Community Members",
     sub: "Members participating in private discourse channels.",
   },
   {
     target: 150,
     suffix: "+",
-    label: "High-Quality Engagement Clusters",
-    sub: "Consistent engagement velocity across major platforms.",
+    label: "Reviews per Selection",
+    sub: "Consistent, analytical engagement around every selected project.",
   },
   {
-    target: 18,
+    target: 15,
     suffix: "",
-    label: "Standout Participants Per Cycle",
+    label: "Creators per Annual Cycle",
     sub: "A deliberately limited, high-attention residency cohort.",
   },
 ];

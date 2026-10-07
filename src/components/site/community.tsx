@@ -3,29 +3,33 @@ import { SectionHeader, Reveal, TextReveal, RevealLine } from "./section-header"
 
 const PILLARS = [
   {
-    title: "Private Channels",
-    description: "Discourse spaces reserved for verified members — no noise, no algorithms.",
+    title: "Curated for merit alone",
+    description:
+      "Selection is steered by intellectual depth and craft. We never select based on commercial trends, social media following, or marketing budgets. Every project earns its place.",
   },
   {
-    title: "Digital Salons",
-    description: "Live, moderated gatherings where selected works are examined in depth.",
+    title: "Independent and transparent",
+    description:
+      "We operate as an independent private technology society. There is no pay-to-play model anywhere in our process. Our funding comes from our private network, so selection criteria stay purely focused on merit.",
   },
   {
-    title: "Analytical Commentary",
-    description: "Structured critique that engages with ideas rather than reactions.",
+    title: "Active immersion, not passive selection",
+    description:
+      "A residency is twelve months of structured engagement, not a one-time announcement. We guide an elite member base through deep dives that build long-tail momentum and lasting recognition for each creator.",
   },
   {
-    title: "Authentic Feedback",
-    description: "Rigorous, honest responses that reflect the true depth of the work.",
+    title: "Permanent intellectual recognition",
+    description:
+      "We treat technology as a permanent cultural contribution. Reviews and discussions from our community stay visible and continue to compound long after the residency cycle closes.",
   },
 ];
 
 export function Community() {
   return (
     <section
-      id="community"
+      id="why"
       className="relative overflow-hidden bg-ink py-24 sm:py-32 lg:py-40"
-      aria-label="Community and engagement"
+      aria-label="Why choose us"
     >
       {/* ambient champagne glow */}
       <div
@@ -38,45 +42,66 @@ export function Community() {
           <div className="lg:col-span-7">
             <SectionHeader
               index="04"
-              eyebrow="High-Signal Engagement"
+              eyebrow="Why Choose Us"
               title={
                 <>
-                  <RevealLine>When the right minds</RevealLine>
+                  <RevealLine>What truly sets us</RevealLine>
                   <RevealLine>
-                    meet the right ideas,
+                    <em className="italic">apart</em> from any other
                   </RevealLine>
-                  <RevealLine>
-                    impact is <em className="italic">inevitable</em>.
-                  </RevealLine>
+                  <RevealLine>learning community.</RevealLine>
                 </>
               }
             />
 
             <Reveal delay={0.15} className="mt-10 max-w-xl">
               <p className="text-[15.5px] font-light leading-[1.85] text-cream/70 sm:text-[17px]">
-                Our community thrives on rigorous, authentic feedback. Through
-                our private channels and active digital salons, we generate
-                consistent, analytical commentary that reflects the true depth
-                of every selected work. This structured engagement naturally
-                translates into a benchmark of high-quality engagement clusters
-                across major platforms — proof that depth, at scale, still
-                wins.
+                We do not run a marketing program dressed up as a tech club.
+                Our community is built on mutual respect and intellectual
+                rigor. Every decision we make is designed to protect the
+                quality of the conversations that happen inside our learning
+                circles and to give serious work the lasting attention it
+                deserves.
               </p>
             </Reveal>
 
-            {/* Benchmark */}
+            {/* Why members stay */}
             <Reveal delay={0.25} className="mt-12">
               <div className="flex items-end gap-6 border-t border-line pt-8">
                 <p className="font-display text-[clamp(4.5rem,9vw,7.5rem)] font-semibold leading-none tabular-nums text-gold">
-                  150<span className="text-cream">+</span>
+                  96<span className="text-cream">%</span>
                 </p>
                 <div className="pb-3">
                   <p className="font-mono-tech text-[10px] uppercase tracking-[0.26em] text-fog">
-                    Engagement clusters
+                    Why members stay
                   </p>
-                  <p className="mt-1.5 max-w-[15rem] text-[13.5px] font-light leading-relaxed text-cream/55">
-                    The benchmark our structured engagement sustains across
-                    major platforms.
+                  <p className="mt-1.5 max-w-[18rem] text-[13.5px] font-light leading-relaxed text-cream/55">
+                    Ninety-six percent of members renew their membership every
+                    year. We do not chase trends, we do not pad our shelves
+                    with quick releases, and we treat every selected project
+                    as a year-long conversation worth finishing.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 grid grid-cols-3 gap-px border border-line-soft bg-line">
+                <div className="bg-ink-2 px-4 py-5 sm:px-6">
+                  <p className="font-display text-2xl font-semibold text-cream sm:text-3xl">4.9</p>
+                  <p className="mt-1.5 font-mono-tech text-[9px] uppercase tracking-[0.2em] text-fog">
+                    Member rating
+                  </p>
+                </div>
+                <div className="bg-ink-2 px-4 py-5 sm:px-6">
+                  <p className="font-display text-2xl font-semibold text-cream sm:text-3xl">12</p>
+                  <p className="mt-1.5 font-mono-tech text-[9px] uppercase tracking-[0.2em] text-fog">
+                    Month residency
+                  </p>
+                </div>
+                <div className="bg-ink-2 px-4 py-5 sm:px-6">
+                  <p className="font-display text-2xl font-semibold text-cream sm:text-3xl">
+                    100<span className="text-gold">%</span>
+                  </p>
+                  <p className="mt-1.5 font-mono-tech text-[9px] uppercase tracking-[0.2em] text-fog">
+                    Independent
                   </p>
                 </div>
               </div>

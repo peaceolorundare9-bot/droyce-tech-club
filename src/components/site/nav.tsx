@@ -9,9 +9,8 @@ const LINKS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
-  { label: "Selection Committee", href: "#committee" },
-  { label: "How We Operate", href: "#operate" },
-  { label: "Voices", href: "#voices" },
+  { label: "Community", href: "#community" },
+  { label: "Stories", href: "#stories" },
   { label: "Contact", href: "#contact" },
 ];
 

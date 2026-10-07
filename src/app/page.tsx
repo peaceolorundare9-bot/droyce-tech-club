@@ -5,9 +5,10 @@ import { Foundation } from "@/components/site/foundation";
 import { Stats } from "@/components/site/stats";
 import { Experience } from "@/components/site/experience";
 import { Community } from "@/components/site/community";
+import { Stories } from "@/components/site/stories";
 import { Committee } from "@/components/site/committee";
-import { Operate } from "@/components/site/operate";
 import { Voices } from "@/components/site/voices";
+import { Faq } from "@/components/site/faq";
 import { Contact } from "@/components/site/contact";
 import { Footer } from "@/components/site/footer";
 
@@ -31,9 +32,10 @@ export default function Home() {
         <Stats />
         <Experience />
         <Community />
+        <Stories />
         <Committee />
-        <Operate />
         <Voices />
+        <Faq />
         <Contact />
       </main>
 

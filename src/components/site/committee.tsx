@@ -1,10 +1,26 @@
 import Image from "next/image";
-import { SectionHeader, Reveal } from "./section-header";
+import { Award, BookOpen, Feather } from "lucide-react";
+import { SectionHeader, Reveal, RevealLine } from "./section-header";
 
-const ROLES = [
-  "Technology Specialists",
-  "Academic Minds",
-  "Cultural Curators",
+const PRINCIPLES = [
+  {
+    icon: BookOpen,
+    title: "Merit First",
+    description:
+      "Every project is reviewed in full and judged on its craft, intellectual depth, and lasting cultural contribution. No marketing budgets, no social metrics, no shortcuts.",
+  },
+  {
+    icon: Feather,
+    title: "Independent Voice",
+    description:
+      "The club operates without commercial pressure. Selection criteria stay focused on the work itself, funded entirely by our private patron network.",
+  },
+  {
+    icon: Award,
+    title: "Permanent Recognition",
+    description:
+      "Selected projects receive a full year of structured engagement that builds lasting review momentum and cultural recognition long after the cycle closes.",
+  },
 ];
 
 export function Committee() {
@@ -12,14 +28,14 @@ export function Committee() {
     <section
       id="committee"
       className="relative overflow-hidden bg-ink py-24 sm:py-32 lg:py-40"
-      aria-label="The selection committee"
+      aria-label="The founder"
     >
       {/* faint oversized watermark */}
       <span
         className="pointer-events-none absolute -right-8 top-16 hidden select-none font-display text-[11rem] font-semibold italic leading-none text-cream/[0.03] lg:block"
         aria-hidden="true"
       >
-        Curate
+        Founder
       </span>
 
       <div className="relative mx-auto grid max-w-[1440px] grid-cols-1 gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:gap-12 lg:px-12">
@@ -34,7 +50,7 @@ export function Committee() {
               <div className="relative aspect-[3/4] overflow-hidden bg-ink-2">
                 <Image
                   src="/images/committee.jpg"
-                  alt="Portrait of Prof. Waheed Heritage, Selection Committee Chair of Droyce Tech Club"
+                  alt="Portrait of Dr. Tomiwa Johnson, Co-Founder and Selection Committee Chair of Droyce Tech Club"
                   fill
                   sizes="(min-width: 1024px) 42vw, 90vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out hover:scale-[1.04]"
@@ -45,10 +61,10 @@ export function Committee() {
                 />
                 <figcaption className="absolute bottom-0 left-0 right-0 p-7 pb-8">
                   <p className="font-display text-2xl font-medium text-cream">
-                    Prof. Waheed Heritage
+                    Dr. Tomiwa Johnson
                   </p>
                   <p className="mt-1.5 font-mono-tech text-[10px] uppercase tracking-[0.26em] text-gold-light">
-                    Selection Committee Chair
+                    Co-Founder &amp; Selection Committee Chair
                   </p>
                 </figcaption>
               </div>
@@ -59,67 +75,59 @@ export function Committee() {
         {/* Content */}
         <div className="order-1 lg:order-2 lg:col-span-7 lg:pl-8">
           <SectionHeader
-            index="05"
-            eyebrow="The Curators"
+            index="06"
+            eyebrow="The Founder"
             title={
               <>
-                The Selection
-                <br />
-                <em className="italic">Committee</em>.
+                <RevealLine>Dr. Tomiwa</RevealLine>
+                <RevealLine>
+                  <em className="italic">Johnson</em>.
+                </RevealLine>
               </>
             }
           />
 
           <Reveal delay={0.15} className="mt-10 max-w-2xl">
             <p className="text-[15.5px] font-light leading-[1.85] text-cream/70 sm:text-[17px]">
-              Our curation process is steered by{" "}
-              <strong className="font-semibold text-cream">
-                Prof. Waheed Heritage
-              </strong>
-              , Selection Committee Chair, alongside a dedicated team of
-              technology specialists, academic minds, and cultural curators.
-              With deep roots in narrative structure and community building,
-              the committee reviews hundreds of independent projects annually
-              to discover the rare few that match our community&apos;s standard
-              for intellectual depth.
+              Dr. Tomiwa Johnson founded Droyce Tech Club in 2017 with a
+              simple conviction — that the best independent work deserves a
+              longer, more serious conversation. With roots in narrative
+              structure and community building, he leads the selection
+              committee, steers the annual residency cycle, and personally
+              reads every submission that reaches the shortlist. There is no
+              committee bureaucracy. Every decision comes down to one curator
+              who cares about the lasting life of a project.
             </p>
           </Reveal>
 
-          <Reveal delay={0.22} className="mt-10">
-            <ul className="flex flex-wrap gap-3" aria-label="Committee roles">
-              {ROLES.map((role) => (
-                <li
-                  key={role}
-                  className="border border-line-soft bg-ink-2 px-5 py-2.5 font-mono-tech text-[10.5px] font-medium uppercase tracking-[0.18em] text-cream/75 transition-colors duration-300 hover:border-gold/60 hover:text-gold-light"
-                >
-                  {role}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
+          {/* Principles */}
+          <div className="mt-12 grid grid-cols-1 gap-px border border-line-soft bg-line sm:grid-cols-3">
+            {PRINCIPLES.map((p, i) => (
+              <Reveal key={p.title} delay={0.1 + i * 0.07} className="h-full">
+                <article className="group h-full bg-ink-2 p-7 transition-colors duration-500 hover:bg-ink-3">
+                  <p.icon
+                    className="h-6 w-6 text-gold transition-transform duration-500 group-hover:-translate-y-0.5"
+                    aria-hidden="true"
+                  />
+                  <h3 className="mt-4 font-display text-lg font-medium leading-snug text-cream">
+                    {p.title}
+                  </h3>
+                  <p className="mt-3 text-[13px] font-light leading-relaxed text-cream/55">
+                    {p.description}
+                  </p>
+                  <span
+                    className="mt-5 block h-px w-8 bg-gold/60 transition-all duration-500 group-hover:w-full"
+                    aria-hidden="true"
+                  />
+                </article>
+              </Reveal>
+            ))}
+          </div>
 
-          <Reveal delay={0.3} className="mt-12">
-            <div className="grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2">
-              <div className="bg-ink-2 p-7">
-                <p className="font-display text-4xl font-semibold tabular-nums text-cream">
-                  100<span className="text-gold">s</span>
-                </p>
-                <p className="mt-3 font-mono-tech text-[10px] uppercase leading-relaxed tracking-[0.2em] text-fog">
-                  Independent projects reviewed every year
-                </p>
-              </div>
-              <div className="bg-ink-2 p-7">
-                <p className="font-display text-4xl font-semibold text-cream">
-                  <span className="text-gold">1</span>–2
-                </p>
-                <p className="mt-3 font-mono-tech text-[10px] uppercase leading-relaxed tracking-[0.2em] text-fog">
-                  Advanced monthly into the residency
-                </p>
-              </div>
-            </div>
-            <p className="mt-6 border-l-2 border-gold pl-5 text-[14px] font-light italic leading-relaxed text-cream/60">
-              Narrative structure &amp; community building — the twin
-              disciplines behind every selection decision.
+          <Reveal delay={0.28} className="mt-10">
+            <p className="border-l-2 border-gold pl-5 text-[14px] font-light italic leading-relaxed text-cream/60">
+              Every submission is read in full and answered personally by Dr.
+              Tomiwa Johnson.
             </p>
           </Reveal>
         </div>

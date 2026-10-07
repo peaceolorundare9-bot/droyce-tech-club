@@ -7,9 +7,11 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Counter } from "./counter";
 
 const HERO_STATS = [
-  { target: 18, suffix: "", label: "Standout participants per annual cycle" },
-  { target: 150, suffix: "+", label: "High-quality engagement clusters" },
-  { target: 12, suffix: "", label: "Months of managed experience" },
+  { target: 21000, suffix: "+", label: "Global Hub Members" },
+  { target: 2000, suffix: "+", label: "Active Community Members" },
+  { target: 150, suffix: "+", label: "Reviews per Selection" },
+  { target: 15, suffix: "", label: "Creators per Annual Cycle" },
+  { target: 2017, suffix: "", label: "Year founded", static: true },
 ];
 
 export function Hero() {
@@ -80,7 +82,7 @@ export function Hero() {
         >
           <span className="h-px w-14 bg-gold" aria-hidden="true" />
           <p className="font-mono-tech text-[10px] font-medium uppercase tracking-[0.32em] text-gold sm:text-[11px]">
-            A Private Technology Society &amp; Managed Digital Experience
+            A Private Technology Society for Creators
           </p>
         </motion.div>
 
@@ -92,7 +94,7 @@ export function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 1.1, delay: 0.7, ease }}
             >
-              Where Technological
+              Where your project earns
             </motion.span>
           </span>
           <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
@@ -102,7 +104,7 @@ export function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 1.1, delay: 0.84, ease }}
             >
-              <em className="italic">Curiosity</em> Meets
+              a <em className="italic">year-long</em> conversation
             </motion.span>
           </span>
           <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
@@ -112,7 +114,7 @@ export function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 1.1, delay: 0.98, ease }}
             >
-              Collective <em className="italic">Craft</em>.
+              with <em className="italic">serious minds</em>.
             </motion.span>
           </span>
         </h1>
@@ -123,10 +125,10 @@ export function Hero() {
           transition={{ duration: 1, delay: 1.2, ease }}
           className="mt-8 max-w-xl text-[15px] font-light leading-relaxed text-cream/75 sm:text-base"
         >
-          Uncovering meaningful innovation in overlooked places. We connect
-          brilliant independent creators with an elite global technology and
-          learning community for a structured, year-long journey of deep
-          digital engagement.
+          Droyce Tech Club is a private technology society that gives
+          independent creators a structured twelve-month residency with an
+          elite global learning community. No noise. No trends. Just work
+          worth keeping, and minds who treat it that way.
         </motion.p>
 
         <motion.div
@@ -159,26 +161,20 @@ export function Hero() {
         transition={{ duration: 1.1, delay: 1.7, ease }}
         className="relative z-10 border-t border-line-soft bg-ink/40 backdrop-blur-md"
       >
-        {/* cycle label */}
-        <div className="mx-auto max-w-[1440px] px-5 pt-6 sm:px-8 lg:px-12">
-          <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-gold" aria-hidden="true" />
-            <p className="font-mono-tech text-[9.5px] font-medium uppercase tracking-[0.3em] text-cream/55">
-              Selection Cycle — 2026 Annual Residency
-            </p>
-          </div>
-        </div>
-
-        <div className="mx-auto grid max-w-[1440px] grid-cols-1 divide-y divide-line-soft sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:px-8 lg:px-12">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-px bg-line-soft sm:grid-cols-3 lg:grid-cols-5">
           {HERO_STATS.map((stat) => (
             <div
               key={stat.label}
-              className="flex items-baseline gap-4 px-5 py-6 sm:px-8 sm:py-7 lg:px-10"
+              className="flex items-baseline gap-4 bg-ink/95 px-5 py-6 sm:px-7 sm:py-7"
             >
-              <span className="font-display text-4xl font-medium tabular-nums text-cream sm:text-5xl">
-                <Counter target={stat.target} suffix={stat.suffix} />
+              <span className="font-display text-3xl font-medium tabular-nums text-cream sm:text-4xl">
+                {stat.static ? (
+                  stat.target
+                ) : (
+                  <Counter target={stat.target} suffix={stat.suffix} />
+                )}
               </span>
-              <span className="max-w-[14rem] font-mono-tech text-[10px] uppercase leading-relaxed tracking-[0.16em] text-cream/55">
+              <span className="max-w-[10rem] font-mono-tech text-[9.5px] uppercase leading-relaxed tracking-[0.16em] text-cream/55">
                 {stat.label}
               </span>
             </div>

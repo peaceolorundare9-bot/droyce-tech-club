@@ -39,37 +39,54 @@ export function Foundation() {
         <div className="lg:col-span-7 lg:pr-10">
           <SectionHeader
             index="01"
-            eyebrow="Our Foundation"
+            eyebrow="About Droyce Tech Club"
             title={
               <>
-                <RevealLine>Technology as a</RevealLine>
+                <RevealLine>We treat technology as a</RevealLine>
                 <RevealLine>
-                  <em className="italic">permanent</em> contribution —
+                  cultural <em className="italic">contribution</em> —
                 </RevealLine>
-                <RevealLine>not a passing commodity.</RevealLine>
+                <RevealLine>not a commodity.</RevealLine>
               </>
             }
           />
 
           <Reveal delay={0.15} className="mt-10 max-w-2xl space-y-6">
             <p className="text-[15.5px] font-light leading-[1.85] text-cream/70 sm:text-[17px]">
-              Droyce Tech Club is built on an{" "}
-              <strong className="font-semibold text-cream">interdisciplinary focus</strong>{" "}
-              that bridges the gap between technology, human progress, and
-              community. We dedicate ourselves to scouting exceptional,
-              independently published works that deserve a{" "}
-              <strong className="font-semibold text-cream">legacy spotlight</strong> —
-              projects with the depth to outlast the news cycle and the craft
-              to shape how people think.
+              Droyce Tech Club is built on the belief that technology still
+              matters as a{" "}
+              <strong className="font-semibold text-cream">
+                permanent cultural contribution
+              </strong>
+              , not just a passing release cycle. We scout independently
+              built works that deserve a{" "}
+              <strong className="font-semibold text-cream">legacy spotlight</strong>{" "}
+              and bring them to a community of careful, engaged minds who
+              treat each project as a long conversation rather than a quick
+              consumption.
             </p>
             <p className="text-[15.5px] font-light leading-[1.85] text-cream/70 sm:text-[17px]">
-              By introducing selected creators to a sophisticated network of
-              deeply engaged thinkers, we foster{" "}
+              Our work bridges technology, human progress, and community. We
+              dedicate ourselves to discovering exceptional, independently
+              built works that deserve a wider legacy, then introduce those
+              creators to a sophisticated network of deeply engaged thinkers
+              who foster{" "}
               <strong className="font-semibold text-cream">high-signal discourse</strong>{" "}
-              that treats technology not as a temporary commodity, but as a
-              permanent cultural contribution — examined, argued over, and
-              remembered.
+              around their work.
             </p>
+          </Reveal>
+
+          <Reveal delay={0.2} className="mt-10">
+            <div className="flex items-center gap-5 border-l-2 border-gold/60 pl-6">
+              <div>
+                <p className="font-display text-xl font-medium text-cream">
+                  Dr. Tomiwa Johnson
+                </p>
+                <p className="mt-1 font-mono-tech text-[10px] uppercase tracking-[0.24em] text-gold">
+                  Co-Founder and Selection Committee Chair
+                </p>
+              </div>
+            </div>
           </Reveal>
 
           <Reveal delay={0.25} className="mt-10">

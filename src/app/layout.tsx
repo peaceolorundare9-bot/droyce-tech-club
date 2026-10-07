@@ -30,33 +30,33 @@ const jetbrains = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://droyce-tech-club.pages.dev"),
-  title: "Droyce Tech Club | Technology, Learning & Digital Community",
+  title: "Droyce Tech Club | A Private Technology Society for Creators",
   description:
-    "Droyce Tech Club is a private technology society connecting independent creators with an engaged global learning community through a structured, year-long digital experience.",
+    "Droyce Tech Club is a private technology society that gives independent creators a structured twelve-month residency with an elite global learning community. Co-founded by Dr. Tomiwa Johnson.",
   keywords: [
     "Droyce Tech Club",
     "technology community",
     "digital learning",
     "innovation society",
     "private tech club",
-    "managed digital experience",
+    "creator residency",
     "tech residency",
   ],
   authors: [{ name: "Droyce Tech Club" }],
   applicationName: "Droyce Tech Club",
   icons: { icon: "/logo.svg" },
   openGraph: {
-    title: "Droyce Tech Club | Technology, Learning & Digital Community",
+    title: "Droyce Tech Club | A Private Technology Society for Creators",
     description:
-      "A private technology society and managed digital experience — connecting brilliant independent creators with a global community of deeply engaged minds.",
+      "Where your project earns a year-long conversation with serious minds — a structured twelve-month residency with an elite global learning community.",
     siteName: "Droyce Tech Club",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Droyce Tech Club | Technology, Learning & Digital Community",
+    title: "Droyce Tech Club | A Private Technology Society for Creators",
     description:
-      "A private technology society and managed digital experience — connecting brilliant independent creators with a global community of deeply engaged minds.",
+      "Where your project earns a year-long conversation with serious minds — a structured twelve-month residency with an elite global learning community.",
   },
   robots: {
     index: true,

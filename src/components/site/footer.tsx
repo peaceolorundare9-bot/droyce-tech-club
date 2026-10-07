@@ -1,14 +1,19 @@
 import { ArrowUpRight, Mail } from "lucide-react";
 import { Reveal } from "./reveal";
 
-const NAV_LINKS = [
+const EXPLORE_LINKS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
-  { label: "Selection Committee", href: "#committee" },
-  { label: "How We Operate", href: "#operate" },
-  { label: "Voices", href: "#voices" },
+  { label: "Community", href: "#community" },
+  { label: "Stories", href: "#stories" },
+];
+
+const MORE_LINKS = [
   { label: "Contact", href: "#contact" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Committee", href: "#committee" },
+  { label: "Why Choose Us", href: "#why" },
 ];
 
 export function Footer() {
@@ -36,9 +41,9 @@ export function Footer() {
                 </span>
               </a>
               <p className="mt-7 max-w-sm text-[14.5px] font-light leading-relaxed text-cream/55">
-                A premium technology, learning and digital community —
-                connecting independent creators with an engaged global network
-                of deeply invested minds.
+                An independent private technology society connecting brilliant
+                independent creators with an elite global learning community
+                for a year-long journey of deep digital engagement.
               </p>
               <a
                 href="mailto:drpeace.droycetechclub@gmail.com"
@@ -51,14 +56,14 @@ export function Footer() {
           </div>
 
           {/* Navigation */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-2">
             <Reveal delay={0.1}>
               <p className="font-mono-tech text-[10px] uppercase tracking-[0.3em] text-fog">
-                Navigate
+                Explore
               </p>
               <nav aria-label="Footer navigation">
-                <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
-                  {NAV_LINKS.map((link) => (
+                <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-3">
+                  {EXPLORE_LINKS.map((link) => (
                     <li key={link.href}>
                       <a
                         href={link.href}
@@ -77,19 +82,53 @@ export function Footer() {
             </Reveal>
           </div>
 
-          {/* Statement */}
+          <div className="lg:col-span-2">
+            <Reveal delay={0.14}>
+              <p className="font-mono-tech text-[10px] uppercase tracking-[0.3em] text-fog">
+                More
+              </p>
+              <nav aria-label="Footer supplementary navigation">
+                <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-3">
+                  {MORE_LINKS.map((link) => (
+                    <li key={link.href}>
+                      <a
+                        href={link.href}
+                        className="group inline-flex items-center gap-1.5 text-[14.5px] font-light text-cream/65 transition-colors duration-300 hover:text-gold-light"
+                      >
+                        {link.label}
+                        <ArrowUpRight
+                          className="h-3 w-3 opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:opacity-100"
+                          aria-hidden="true"
+                        />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </Reveal>
+          </div>
+
+          {/* Newsletter */}
           <div className="lg:col-span-3">
             <Reveal delay={0.18}>
               <p className="font-mono-tech text-[10px] uppercase tracking-[0.3em] text-fog">
-                The Standard
+                The Lab Dispatch
               </p>
-              <p className="mt-6 font-display text-2xl font-light italic leading-snug text-cream/80">
-                &ldquo;Depth, at scale, still wins.&rdquo;
+              <p className="mt-6 text-[14px] font-light leading-relaxed text-cream/65">
+                A short monthly letter from the committee. New selections,
+                project notes, and one essay worth your weekend.
               </p>
-              <div className="mt-8 flex items-center gap-3" aria-hidden="true">
-                <span className="h-1.5 w-1.5 rotate-45 bg-gold" />
-                <span className="h-px w-16 bg-gold/40" />
-              </div>
+              <a
+                href="mailto:drpeace.droycetechclub@gmail.com?subject=Subscribe%20to%20The%20Lab%20Dispatch"
+                className="group mt-6 inline-flex items-center gap-3 border border-gold/40 px-6 py-3 font-mono-tech text-[10px] font-semibold uppercase tracking-[0.22em] text-cream transition-all duration-500 hover:border-gold/70 hover:bg-gold/10 hover:text-gold"
+              >
+                <Mail className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
+                Subscribe
+                <ArrowUpRight
+                  className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  aria-hidden="true"
+                />
+              </a>
             </Reveal>
           </div>
         </div>
@@ -104,11 +143,29 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-line pt-8 sm:flex-row">
           <p className="font-mono-tech text-[10.5px] uppercase tracking-[0.2em] text-fog">
-            © 2026 Droyce Tech Club. All Rights Reserved.
+            © 2017 Droyce Tech Club. All Rights Reserved. Co-Founded by Dr.
+            Tomiwa Johnson.
           </p>
-          <p className="font-mono-tech text-[10.5px] uppercase tracking-[0.2em] text-fog">
-            A Private Technology Society &amp; Managed Digital Experience
-          </p>
+          <div className="flex items-center gap-6">
+            <a
+              href="#home"
+              className="font-mono-tech text-[10.5px] uppercase tracking-[0.2em] text-fog transition-colors duration-300 hover:text-gold-light"
+            >
+              Privacy
+            </a>
+            <a
+              href="#home"
+              className="font-mono-tech text-[10.5px] uppercase tracking-[0.2em] text-fog transition-colors duration-300 hover:text-gold-light"
+            >
+              Terms
+            </a>
+            <a
+              href="#home"
+              className="font-mono-tech text-[10.5px] uppercase tracking-[0.2em] text-fog transition-colors duration-300 hover:text-gold-light"
+            >
+              Code of Conduct
+            </a>
+          </div>
         </div>
       </div>
     </footer>
